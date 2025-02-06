@@ -40,7 +40,7 @@ def git_sync():
         time.sleep(2)  # Petite pause après le pull
         run_command("git add -A")
         run_command(f"git commit -m '{username}'")
-        run_command("git push --set-upstream origin main")
+        run_command("git branch --set-upstream-to=origin/main main")
         print("\n--- Synchronisation terminée. Attente avant le prochain cycle... ---")
         time.sleep(60)  # Attente de 60 secondes avant la prochaine synchronisation
 
