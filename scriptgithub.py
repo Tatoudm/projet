@@ -13,7 +13,7 @@ def git_sync():
         run_command("git pull")
         time.sleep(2)  # Petite pause après le pull
         run_command("git add .")
-        run_command("git commit -m 'Victor'")
+        run_command("git commit -m Victor")
         run_command("git push")
         print("\n--- Synchronisation terminée. Attente avant le prochain cycle... ---")
         time.sleep(60)  
