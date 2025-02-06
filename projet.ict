@@ -1,0 +1,196 @@
+ctjsVersion: 5.2.1
+backups: 3
+language: typescript
+notes: /* empty */
+libs:
+  place:
+    gridX: 1024
+    gridY: 1024
+  pointer: {}
+  keyboard: {}
+  keyboard.polyfill: {}
+  pointer.polyfill: {}
+startroom: -1
+contentTypes: []
+actions: []
+scripts: []
+assets:
+  - lastmod: 1738827631176
+    type: texture
+    name: téléchargement
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0.6666666666666665
+      - -0.6666666666666666
+    marginx: 0
+    marginy: 0
+    imgWidth: 160
+    imgHeight: 140
+    width: 160
+    height: 140
+    offx: 0
+    offy: 0
+    origname: itFd3j7MLn3Q6d7.png
+    shape: rect
+    left: 0
+    right: 160
+    top: 0
+    bottom: 140
+    uid: tFd3j7MLn3Q6d7
+    padding: 1
+    isBlank: false
+    source: 'E:\ctjs\téléchargement.jpeg'
+  - type: room
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    gridX: 64
+    gridY: 64
+    diagonalGrid: false
+    disableGrid: false
+    simulate: true
+    width: 1280
+    height: 720
+    restrictCamera: false
+    restrictMaxX: 1280
+    restrictMinX: 0
+    restrictMaxY: 720
+    restrictMinY: 0
+    isUi: false
+    name: Caca
+    backgroundColor: '#000000'
+    follow: -1
+    backgrounds: []
+    copies: []
+    tiles:
+      - depth: 5
+        tiles:
+          - x: 256
+            'y': 512
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            frame: 0
+            rotation: 0
+            texture: tFd3j7MLn3Q6d7
+          - x: 384
+            'y': 512
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            frame: 0
+            rotation: 0
+            texture: tFd3j7MLn3Q6d7
+          - x: 512
+            'y': 512
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            frame: 0
+            rotation: 0
+            texture: tFd3j7MLn3Q6d7
+          - x: 640
+            'y': 512
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            frame: 0
+            rotation: 0
+            texture: tFd3j7MLn3Q6d7
+          - x: 768
+            'y': 512
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            frame: 0
+            rotation: 0
+            texture: tFd3j7MLn3Q6d7
+          - x: 896
+            'y': 512
+            opacity: 1
+            tint: 16777215
+            scale:
+              x: 1
+              'y': 1
+            frame: 0
+            rotation: 0
+            texture: tFd3j7MLn3Q6d7
+        extends:
+          cgroup: caca
+        hidden: false
+        cache: true
+    extends: {}
+    lastmod: 1738827786256
+    events: []
+    behaviors: []
+    extendTypes: ''
+    uid: w1TNMzwqDTbp7b
+    lastPickedTileset: tFd3j7MLn3Q6d7
+globalVars: []
+settings:
+  authoring:
+    author: ''
+    site: ''
+    title: ''
+    version:
+      - 0
+      - 0
+      - 0
+    versionPostfix: ''
+    appId: ''
+  rendering:
+    usePixiLegacy: true
+    transparent: false
+    maxFPS: 60
+    pixelatedrender: false
+    highDensity: true
+    desktopMode: maximized
+    hideCursor: false
+    mobileScreenOrientation: unspecified
+    viewMode: scaleFit
+  export:
+    showErrors: true
+    errorsLink: ''
+    autocloseDesktop: true
+    windows: true
+    linux: true
+    mac: true
+    functionWrap: false
+    codeModifier: none
+    bundleAssetTree: false
+    bundleAssetTypes:
+      texture: true
+      template: true
+      room: true
+      behavior: false
+      typeface: false
+      sound: false
+      style: false
+      tandem: false
+      script: false
+      enum: false
+  branding:
+    accent: '#446adb'
+    invertPreloaderScheme: true
+    icon: -1
+    splashScreen: -1
+    forceSmoothIcons: false
+    forceSmoothSplashScreen: false
+    hideLoadingLogo: false
+    alternativeLogo: false
+    customLoadingText: ''
+  fps: 30
