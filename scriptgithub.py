@@ -37,12 +37,12 @@ def git_sync():
     while True:
         print("\n--- Synchronisation Git en cours ---")
         run_command("git pull origin main")
-        time.sleep(2)  # Petite pause après le pull
+        time.sleep(2) 
         run_command("git add -A")
         run_command(f"git commit -m '{username}'")
         run_command("git branch --set-upstream-to=origin/main main")
         print("\n--- Synchronisation terminée. Attente avant le prochain cycle... ---")
-        time.sleep(60)  # Attente de 60 secondes avant la prochaine synchronisation
+        time.sleep(60) 
 
 if __name__ == "__main__":
     git_sync()
