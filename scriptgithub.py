@@ -36,7 +36,7 @@ def git_sync():
     check_git_remote()
     while True:
         print("\n--- Synchronisation Git en cours ---")
-        run_command("git pull")
+        run_command("git pull --rebase")
         time.sleep(2)  # Petite pause après le pull
         run_command("git add -A")
         run_command(f"git commit -m '{username}'")
