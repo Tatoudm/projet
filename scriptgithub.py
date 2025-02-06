@@ -39,7 +39,7 @@ def git_sync():
         run_command("git pull origin main")
         time.sleep(2) 
         run_command("git add -A")
-        run_command(f"git commit -m '{username}'")
+        run_command(f"git commit -m {username}")
         run_command("git branch --set-upstream-to=origin/main main")
         run_command("git push")
         print("\n--- Synchronisation terminée. Attente avant le prochain cycle... ---")
