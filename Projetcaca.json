@@ -1011,6 +1011,16 @@
             },
             {
               "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "PlatformerObject",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Wait"
               },
               "parameters": [
@@ -1032,6 +1042,16 @@
               "parameters": [
                 "Truc normaux",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "PlatformerObject",
+                "yes"
               ]
             }
           ]
