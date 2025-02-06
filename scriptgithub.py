@@ -24,7 +24,7 @@ def git_sync():
         print("\n--- Synchronisation Git en cours ---")
         run_command("git pull")
         time.sleep(2)  
-        run_command("git add .")
+        run_command("git add -A")
         run_command("git commit -m Nathan")
         run_command("git push")
         print("\n--- Synchronisation terminée. Attente avant le prochain cycle... ---")
