@@ -25,7 +25,7 @@ def check_git_remote():
     result = subprocess.run("git remote get-url origin", shell=True, capture_output=True, text=True)
     if result.returncode != 0:
         print("Aucun dépôt Git configuré. Configuration du dépôt par défaut...")
-        run_command("git remote add origin https://github.com/tatoudm/projet.git")
+        run_command("git remote add origin https://github.com/Tatoudm/projet.git")
         run_command("git branch -M main")
         run_command("git push -u origin main")
     else:
