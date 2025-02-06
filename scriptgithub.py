@@ -31,20 +31,18 @@ def check_git_remote():
     else:
         print("Dépôt Git déjà configuré.")
 
-
-
 def git_sync():
     username = check_github_auth()
     check_git_remote()
     while True:
         print("\n--- Synchronisation Git en cours ---")
         run_command("git pull")
-        time.sleep(2)  
+        time.sleep(2)  # Petite pause après le pull
         run_command("git add -A")
         run_command(f"git commit -m '{username}'")
-        run_command("git push")
+        run_command("git push --set-upstream origin main")
         print("\n--- Synchronisation terminée. Attente avant le prochain cycle... ---")
-        time.sleep(60)  
+        time.sleep(60)  # Attente de 60 secondes avant la prochaine synchronisation
 
 if __name__ == "__main__":
     git_sync()
