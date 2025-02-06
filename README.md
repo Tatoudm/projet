@@ -4,5 +4,4 @@
   * Créer un jeu
 - Manière:
   * Avec un moteur de jeu nocode
-  * caca
-  * 
+
