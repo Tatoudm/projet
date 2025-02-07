@@ -193,13 +193,7 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [
-    {
-      "name": "Coins",
-      "type": "number",
-      "value": 0
-    }
-  ],
+  "variables": [],
   "layouts": [
     {
       "b": 255,
@@ -249,7 +243,13 @@
           ]
         }
       ],
-      "variables": [],
+      "variables": [
+        {
+          "name": "coins",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -941,56 +941,25 @@
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "NewText",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Text",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Text",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 20,
-            "color": "0;0;0"
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
           "name": "CoinsText",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
-          "string": "\"Coins: \" + ToString(Variable(coins))",
+          "behaviors": [
+            {
+              "bottomEdgeAnchor": 1,
+              "leftEdgeAnchor": 2,
+              "name": "Anchor",
+              "relativeToOriginalWindowSize": true,
+              "rightEdgeAnchor": 2,
+              "topEdgeAnchor": 1,
+              "type": "AnchorBehavior::AnchorBehavior",
+              "useLegacyBottomAndRightAnchors": false
+            }
+          ],
+          "string": "",
           "font": "",
           "textAlignment": "left",
           "characterSize": 20,
@@ -1013,7 +982,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "\"Coins: \" + ToString(Variable(coins))",
+            "text": "",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -1050,9 +1019,6 @@
           },
           {
             "objectName": "Logo"
-          },
-          {
-            "objectName": "NewText"
           },
           {
             "objectName": "CoinsText"
@@ -1165,6 +1131,33 @@
                 "80",
                 "RandomFloatInRange(1,1.1)"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "coins",
+                "+",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "CoinsText",
+                "Text",
+                "=",
+                "\"Coins: \" + ToString(Variable(coins))"
+              ]
             }
           ]
         }
@@ -1234,6 +1227,10 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior"
+        },
         {
           "name": "Animation",
           "type": "AnimatableCapability::AnimatableBehavior"
