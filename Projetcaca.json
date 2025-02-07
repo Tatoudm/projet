@@ -184,6 +184,14 @@
         "name": "logoNathaCorpStudio.jpg",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/SpawnPoint.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpawnPoint",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -246,6 +254,26 @@
       "variables": [
         {
           "name": "coins",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "spawnX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "spawnY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "playerY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "playerX",
           "type": "number",
           "value": 0
         }
@@ -460,6 +488,22 @@
           "x": 939,
           "y": 31,
           "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "SpawnPoint",
+          "persistentUuid": "60b51cb7-d67a-4daf-82ce-4077aa3ddf83",
+          "width": 0,
+          "x": 128,
+          "y": 257,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -989,6 +1033,48 @@
             "characterSize": 20,
             "color": "0;0;0"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SpawnPoint",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "SpawnPoint",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "SpawnPoint",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1022,6 +1108,9 @@
           },
           {
             "objectName": "CoinsText"
+          },
+          {
+            "objectName": "SpawnPoint"
           }
         ]
       },
@@ -1055,6 +1144,26 @@
                 "Platformer_Character",
                 "PlatformerObject",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "spawnX",
+                "=",
+                "SpawnPoint.PointX(\"\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "spawnY",
+                "=",
+                "SpawnPoint.PointY(\"\")"
               ]
             },
             {
@@ -1157,6 +1266,55 @@
                 "Text",
                 "=",
                 "\"Coins: \" + ToString(Variable(coins))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "playerX",
+                "=",
+                "Platformer_Character.PointX(\"\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "playerY",
+                "=",
+                "Platformer_Character.PointY(\"\")"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "playerY",
+                ">=",
+                "800"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "=",
+                "spawnX",
+                "=",
+                "spawnY"
               ]
             }
           ]
