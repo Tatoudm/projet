@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "Scene Logo",
   "gdVersion": {
     "build": 224,
     "major": 5,
@@ -405,7 +405,7 @@
               },
               "parameters": [
                 "",
-                "\"Game Scene\""
+                "\"Lobby\""
               ]
             }
           ]
@@ -491,8 +491,8 @@
     {
       "b": 255,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Game_32Scene",
-      "name": "Game Scene",
+      "mangledName": "Lobby",
+      "name": "Lobby",
       "r": 255,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
