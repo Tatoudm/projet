@@ -3937,6 +3937,14 @@
           "actions": [
             {
               "type": {
+                "value": "CacheSouris"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Wait"
               },
               "parameters": [
@@ -12014,6 +12022,14 @@
                 "respawn",
                 "=",
                 "CurrentSceneName()"
+              ]
+            },
+            {
+              "type": {
+                "value": "CacheSouris"
+              },
+              "parameters": [
+                ""
               ]
             }
           ]
