@@ -19273,7 +19273,7 @@
         {
           "name": "scene",
           "type": "string",
-          "value": ""
+          "value": "Scene Logo"
         }
       ],
       "instances": [
@@ -19445,6 +19445,16 @@
                 "100",
                 "1"
               ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "scene",
+                "=",
+                "\"Scene Logo\""
+              ]
             }
           ]
         },
@@ -19495,7 +19505,7 @@
               },
               "parameters": [
                 "",
-                "ToString(Variable(scene))",
+                "Variable(scene)",
                 ""
               ]
             }
