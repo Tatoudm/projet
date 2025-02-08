@@ -19400,8 +19400,8 @@
               },
               "parameters": [
                 "",
-                "ToString(Variable(Scene))",
-                "yes"
+                "\"Lobby\"",
+                ""
               ]
             }
           ]
