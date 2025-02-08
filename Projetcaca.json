@@ -2429,8 +2429,8 @@
   "variables": [
     {
       "name": "respawn",
-      "type": "string",
-      "value": "Lobby"
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -10848,6 +10848,16 @@
                 "=",
                 "SpawnPoint.PointY(\"\")"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "respawn",
+                "=",
+                "1"
+              ]
             }
           ]
         },
@@ -10934,16 +10944,6 @@
                 "playerY",
                 "=",
                 "Player.PointY(\"\")"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetStringVariable"
-              },
-              "parameters": [
-                "respawn",
-                "=",
-                "CurrentSceneName()"
               ]
             }
           ]
@@ -19269,7 +19269,13 @@
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "scene",
+          "type": "string",
+          "value": ""
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -19447,6 +19453,33 @@
           "conditions": [
             {
               "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "respawn",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "scene",
+                "=",
+                "\"Lobby\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
               },
               "parameters": [
@@ -19462,7 +19495,7 @@
               },
               "parameters": [
                 "",
-                "Variable(respawn)",
+                "ToString(Variable(scene))",
                 ""
               ]
             }
