@@ -12447,6 +12447,16 @@
           "actions": [
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "coins",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
                 "value": "Scene"
               },
               "parameters": [
