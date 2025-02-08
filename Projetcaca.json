@@ -2429,8 +2429,8 @@
   "variables": [
     {
       "name": "respawn",
-      "type": "number",
-      "value": 0
+      "type": "string",
+      "value": "Scene Logo"
     }
   ],
   "layouts": [
@@ -4652,6 +4652,8 @@
               "JumpButton": "A"
             },
             {
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "acceleration": 1000,
               "canGoDownFromJumpthru": true,
               "canGrabPlatforms": false,
@@ -4664,9 +4666,7 @@
               "ladderClimbingSpeed": 200,
               "maxFallingSpeed": 800,
               "maxSpeed": 400,
-              "name": "PlatformerObject",
               "slopeMaxAngle": 60,
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "useLegacyTrajectory": false,
               "xGrabTolerance": 10,
               "yGrabOffset": 0
@@ -10460,10 +10460,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -10571,10 +10571,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -10644,13 +10644,13 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Anchor",
+              "type": "AnchorBehavior::AnchorBehavior",
               "bottomEdgeAnchor": 1,
               "leftEdgeAnchor": 1,
-              "name": "Anchor",
               "relativeToOriginalWindowSize": true,
               "rightEdgeAnchor": 1,
               "topEdgeAnchor": 1,
-              "type": "AnchorBehavior::AnchorBehavior",
               "useLegacyBottomAndRightAnchors": false
             }
           ],
@@ -10851,12 +10851,12 @@
             },
             {
               "type": {
-                "value": "SetNumberVariable"
+                "value": "SetStringVariable"
               },
               "parameters": [
                 "respawn",
                 "=",
-                "1"
+                "CurrentSceneName()"
               ]
             }
           ]
@@ -19445,43 +19445,6 @@
                 "100",
                 "1"
               ]
-            },
-            {
-              "type": {
-                "value": "SetStringVariable"
-              },
-              "parameters": [
-                "scene",
-                "=",
-                "\"Scene Logo\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "respawn",
-                "=",
-                "1"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetStringVariable"
-              },
-              "parameters": [
-                "scene",
-                "=",
-                "\"Lobby\""
-              ]
             }
           ]
         },
@@ -19505,7 +19468,7 @@
               },
               "parameters": [
                 "",
-                "Variable(scene)",
+                "respawn",
                 ""
               ]
             }
