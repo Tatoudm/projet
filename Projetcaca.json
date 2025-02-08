@@ -3981,21 +3981,25 @@
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
-                "gdjs.evtTools.storage.readStringFromJSONFile(\"gameData\", \"save\", runtimeScene, (error, encryptedData) => {",
-                "    if (!error && encryptedData) {",
-                "        try {",
-                "            const jsonData = atob(encryptedData);",
-                "            const saveData = JSON.parse(jsonData);",
-                "            ",
-                "            runtimeScene.getGame().getVariables().get(\"lastScene\").setString(saveData.lastScene);",
-                "            runtimeScene.getGame().getVariables().get(\"vie\").setNumber(saveData.vie);",
-                "            runtimeScene.getGame().getVariables().get(\"vieMax\").setNumber(saveData.vieMax);",
-                "            runtimeScene.getGame().getVariables().get(\"coins\").setNumber(saveData.coins);",
-                "        } catch (e) {",
-                "            console.error(\"Erreur lors de la lecture des données:\", e);",
+                "gdjs.extensions.LocalFileSave.loadFromFile(\"save.dat\")",
+                "    .then(encryptedData => {",
+                "        if (encryptedData) {",
+                "            try {",
+                "                const jsonData = atob(encryptedData);",
+                "                const saveData = JSON.parse(jsonData);",
+                "                ",
+                "                runtimeScene.getGame().getVariables().get(\"lastScene\").setString(saveData.lastScene);",
+                "                runtimeScene.getGame().getVariables().get(\"vie\").setNumber(saveData.vie);",
+                "                runtimeScene.getGame().getVariables().get(\"vieMax\").setNumber(saveData.vieMax);",
+                "                runtimeScene.getGame().getVariables().get(\"coins\").setNumber(saveData.coins);",
+                "            } catch (e) {",
+                "                console.error(\"Erreur lors de la lecture:\", e);",
+                "            }",
                 "        }",
-                "    }",
-                "});"
+                "    })",
+                "    .catch(error => {",
+                "        console.error(\"Erreur de chargement:\", error);",
+                "    });"
               ],
               "parameterObjects": "",
               "useStrict": true,
@@ -11646,8 +11650,8 @@
           "behaviors": [
             {
               "name": "Platform",
-              "platformType": "Jumpthru",
               "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Jumpthru",
               "canBeGrabbed": true,
               "yGrabOffset": 0
             }
@@ -11768,13 +11772,13 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Anchor",
+              "type": "AnchorBehavior::AnchorBehavior",
               "bottomEdgeAnchor": 1,
               "leftEdgeAnchor": 1,
-              "name": "Anchor",
               "relativeToOriginalWindowSize": true,
               "rightEdgeAnchor": 1,
               "topEdgeAnchor": 1,
-              "type": "AnchorBehavior::AnchorBehavior",
               "useLegacyBottomAndRightAnchors": false
             }
           ],
@@ -11841,13 +11845,13 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Anchor",
+              "type": "AnchorBehavior::AnchorBehavior",
               "bottomEdgeAnchor": 1,
               "leftEdgeAnchor": 1,
-              "name": "Anchor",
               "relativeToOriginalWindowSize": true,
               "rightEdgeAnchor": 1,
               "topEdgeAnchor": 1,
-              "type": "AnchorBehavior::AnchorBehavior",
               "useLegacyBottomAndRightAnchors": false
             }
           ],
@@ -11892,13 +11896,13 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Anchor",
+              "type": "AnchorBehavior::AnchorBehavior",
               "bottomEdgeAnchor": 1,
               "leftEdgeAnchor": 1,
-              "name": "Anchor",
               "relativeToOriginalWindowSize": true,
               "rightEdgeAnchor": 1,
               "topEdgeAnchor": 1,
-              "type": "AnchorBehavior::AnchorBehavior",
               "useLegacyBottomAndRightAnchors": false
             },
             {
@@ -24234,11 +24238,17 @@
                 "    vieMax: runtimeScene.getGame().getVariables().get(\"vieMax\").getAsNumber(),",
                 "    coins: runtimeScene.getGame().getVariables().get(\"coins\").getAsNumber()",
                 "};",
+                "",
                 "const jsonData = JSON.stringify(saveData);",
                 "const encryptedData = btoa(jsonData);",
                 "",
-                "gdjs.evtTools.storage.writeNumberInJSONFile(\"gameData\", \"timestamp\", Date.now());",
-                "gdjs.evtTools.storage.writeStringInJSONFile(\"gameData\", \"save\", encryptedData);"
+                "gdjs.extensions.LocalFileSave.saveToFile(encryptedData, \"save.dat\")",
+                "    .then(() => {",
+                "        console.log(\"Sauvegarde réussie\");",
+                "    })",
+                "    .catch(error => {",
+                "        console.error(\"Erreur de sauvegarde:\", error);",
+                "    });"
               ],
               "parameterObjects": "",
               "useStrict": true,
@@ -55584,6 +55594,78 @@
           "sharedPropertyDescriptors": []
         }
       ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "TatouDM",
+      "category": "",
+      "extensionNamespace": "",
+      "fullName": "",
+      "helpPath": "",
+      "iconUrl": "",
+      "name": "LocalFileSave",
+      "previewIconUrl": "",
+      "shortDescription": "",
+      "version": "1.0.0",
+      "description": "Save game data to local files",
+      "tags": [],
+      "authorIds": [],
+      "dependencies": [
+        {
+          "exportName": "",
+          "name": "electron",
+          "type": "npm",
+          "version": ""
+        },
+        {
+          "exportName": "",
+          "name": "fs",
+          "type": "npm",
+          "version": ""
+        }
+      ],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [
+        {
+          "description": "Save game data to a local file",
+          "fullName": "Save data to a local file",
+          "functionType": "Action",
+          "name": "saveToFile",
+          "sentence": "",
+          "events": [],
+          "parameters": [
+            {
+              "description": "Data to save",
+              "name": "data",
+              "type": "string"
+            },
+            {
+              "description": "Name of the file",
+              "name": "filename",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Load game data from a local file",
+          "fullName": "Load data from a local file",
+          "functionType": "Action",
+          "name": "loadFromFile",
+          "sentence": "",
+          "events": [],
+          "parameters": [
+            {
+              "description": "Name of the file to load",
+              "name": "filename",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [],
       "eventsBasedObjects": []
     }
   ],
