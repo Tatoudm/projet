@@ -23570,7 +23570,7 @@
         },
         {
           "assetStoreId": "9d5de415b6e469c681701ea42d3b1c486fee31d6ef591a2d3e226f639ab486ff",
-          "name": "TwoChoicesDialogBox",
+          "name": "Quitterchoix",
           "type": "TwoChoicesDialogBoxes::TwoChoicesDialogBox",
           "variables": [],
           "effects": [],
@@ -23579,12 +23579,209 @@
             "LabelButtonID0": "Oui",
             "LabelButtonID1": "Non",
             "EnableEscape": true,
-            "TextMessage": "Etes-vous sur de vouloir quitter? Cela reinitialisera votre progression."
+            "TextMessage": "Etes-vous sur de vouloir quitter? Cela effacera toute progression non sauvegardée."
           },
           "childrenContent": {
             "Dialogue": {
               "content": {
                 "text": "Etes-vous sur de vouloir quitter? Cela \nreinitialisera votre progression.",
+                "opacity": 255,
+                "scale": 2,
+                "fontSize": 20,
+                "tint": "255;255;255",
+                "bitmapFontResourceName": "8BitOperatorPlus8Regular_Edited.fnt",
+                "textureAtlasResourceName": "8BitOperatorPlus8Regular_Edited.png",
+                "align": "left",
+                "wordWrap": true
+              }
+            },
+            "NoButton": {
+              "content": {
+                "LeftPadding": 8,
+                "RightPadding": 8,
+                "PressedLabelOffsetY": 0,
+                "IdleLabelOffsetY": -8,
+                "BottomPadding": 8,
+                "TopPadding": 8,
+                "MinimalWidth": 300
+              },
+              "childrenContent": {
+                "Hovered": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Idle": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Label": {
+                  "bold": false,
+                  "italic": false,
+                  "smoothed": true,
+                  "underlined": false,
+                  "string": "No",
+                  "font": "",
+                  "textAlignment": "center",
+                  "characterSize": 26,
+                  "color": {
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                  },
+                  "content": {
+                    "bold": false,
+                    "isOutlineEnabled": false,
+                    "isShadowEnabled": false,
+                    "italic": false,
+                    "outlineColor": "255;255;255",
+                    "outlineThickness": 2,
+                    "shadowAngle": 90,
+                    "shadowBlurRadius": 2,
+                    "shadowColor": "0;0;0",
+                    "shadowDistance": 4,
+                    "shadowOpacity": 127,
+                    "smoothed": true,
+                    "underlined": false,
+                    "text": "No",
+                    "font": "",
+                    "textAlignment": "center",
+                    "verticalTextAlignment": "top",
+                    "characterSize": 26,
+                    "color": "255;255;255"
+                  }
+                },
+                "Pressed": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                }
+              }
+            },
+            "TextBorder": {
+              "bottomMargin": 16,
+              "height": 48,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Border.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 48
+            },
+            "YesButton": {
+              "content": {
+                "LeftPadding": 8,
+                "RightPadding": 8,
+                "PressedLabelOffsetY": 0,
+                "IdleLabelOffsetY": -8,
+                "BottomPadding": 8,
+                "TopPadding": 8,
+                "MinimalWidth": 300
+              },
+              "childrenContent": {
+                "Hovered": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Idle": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Label": {
+                  "bold": false,
+                  "italic": false,
+                  "smoothed": true,
+                  "underlined": false,
+                  "string": "Yes",
+                  "font": "",
+                  "textAlignment": "center",
+                  "characterSize": 26,
+                  "color": {
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                  },
+                  "content": {
+                    "bold": false,
+                    "isOutlineEnabled": false,
+                    "isShadowEnabled": false,
+                    "italic": false,
+                    "outlineColor": "255;255;255",
+                    "outlineThickness": 2,
+                    "shadowAngle": 90,
+                    "shadowBlurRadius": 2,
+                    "shadowColor": "0;0;0",
+                    "shadowDistance": 4,
+                    "shadowOpacity": 127,
+                    "smoothed": true,
+                    "underlined": false,
+                    "text": "Yes",
+                    "font": "",
+                    "textAlignment": "center",
+                    "verticalTextAlignment": "top",
+                    "characterSize": 26,
+                    "color": "255;255;255"
+                  }
+                },
+                "Pressed": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                }
+              }
+            }
+          }
+        },
+        {
+          "assetStoreId": "9d5de415b6e469c681701ea42d3b1c486fee31d6ef591a2d3e226f639ab486ff",
+          "name": "Savereussie",
+          "type": "TwoChoicesDialogBoxes::TwoChoicesDialogBox",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LabelButtonID0": "Ok",
+            "LabelButtonID1": "Quitter",
+            "EnableEscape": true,
+            "TextMessage": "Sauvegarde réussie!"
+          },
+          "childrenContent": {
+            "Dialogue": {
+              "content": {
+                "text": "Sauvegarde réussie!",
                 "opacity": 255,
                 "scale": 2,
                 "fontSize": 20,
@@ -23868,7 +24065,10 @@
             "objectName": "Reprendre"
           },
           {
-            "objectName": "TwoChoicesDialogBox"
+            "objectName": "Quitterchoix"
+          },
+          {
+            "objectName": "Savereussie"
           }
         ]
       },
@@ -23916,7 +24116,7 @@
               },
               "parameters": [
                 "",
-                "TwoChoicesDialogBox",
+                "Quitterchoix",
                 "356",
                 "253",
                 ""
@@ -23932,7 +24132,7 @@
                 "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsYesClicked"
               },
               "parameters": [
-                "TwoChoicesDialogBox",
+                "Quitterchoix",
                 ""
               ]
             }
@@ -23956,7 +24156,7 @@
                 "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsNoClicked"
               },
               "parameters": [
-                "TwoChoicesDialogBox",
+                "Quitterchoix",
                 ""
               ]
             }
@@ -23967,7 +24167,7 @@
                 "value": "Delete"
               },
               "parameters": [
-                "TwoChoicesDialogBox",
+                "Quitterchoix",
                 ""
               ]
             }
@@ -24010,7 +24210,20 @@
               ]
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Savereussie",
+                "356",
+                "253",
+                ""
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::JsCode",
@@ -24030,6 +24243,68 @@
               "parameterObjects": "",
               "useStrict": true,
               "eventsSheetExpanded": false
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsNoClicked"
+              },
+              "parameters": [
+                "Savereussie",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Savereussie",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Quitterchoix",
+                "356",
+                "253",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsYesClicked"
+              },
+              "parameters": [
+                "Savereussie",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Savereussie",
+                ""
+              ]
             }
           ]
         }
