@@ -2432,6 +2432,14 @@
         "metadata": "",
         "name": "Retro Gaming.ttf",
         "userAdded": false
+      },
+      {
+        "file": "pause.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "pause.jpg",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2446,6 +2454,11 @@
       "name": "respawn",
       "type": "string",
       "value": "Scene Logo"
+    },
+    {
+      "name": "coins",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -2824,9 +2837,6 @@
           "name": "Truc normaux",
           "objects": [
             {
-              "name": "Coins"
-            },
-            {
               "name": "JumpButton"
             },
             {
@@ -2836,11 +2846,6 @@
         }
       ],
       "variables": [
-        {
-          "name": "coins",
-          "type": "number",
-          "value": 0
-        },
         {
           "name": "spawnX",
           "type": "number",
@@ -3203,75 +3208,31 @@
           "name": "argent",
           "persistentUuid": "6003248e-d025-4232-a0ec-233c6abad368",
           "width": 65,
-          "x": 128,
-          "y": 36,
+          "x": 14,
+          "y": 67,
           "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "cointext",
+          "persistentUuid": "bb76991a-0210-4b02-b0f2-bc9d644f4f8b",
+          "width": 0,
+          "x": 36,
+          "y": 73,
+          "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
       "objects": [
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Coins",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingCoin.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 19,
-                            "y": 0
-                          },
-                          {
-                            "x": 19,
-                            "y": 18
-                          },
-                          {
-                            "x": 0,
-                            "y": 18
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "9c727020616afdd6ba786b8af206a90481f07db0ca175ed6a4cc5b7e01c66d06",
@@ -10578,14 +10539,25 @@
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "NewText",
+          "name": "cointext",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
-          "string": "",
+          "behaviors": [
+            {
+              "bottomEdgeAnchor": 1,
+              "leftEdgeAnchor": 1,
+              "name": "Anchor",
+              "relativeToOriginalWindowSize": true,
+              "rightEdgeAnchor": 1,
+              "topEdgeAnchor": 1,
+              "type": "AnchorBehavior::AnchorBehavior",
+              "useLegacyBottomAndRightAnchors": false
+            }
+          ],
+          "string": "x1",
           "font": "Retro Gaming.ttf",
           "textAlignment": "left",
           "characterSize": 20,
@@ -10608,7 +10580,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "",
+            "text": "x1",
             "font": "Retro Gaming.ttf",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -10622,9 +10594,6 @@
         "children": [
           {
             "objectName": "Hitbox"
-          },
-          {
-            "objectName": "Coins"
           },
           {
             "folderName": "Mobile Controls",
@@ -10695,7 +10664,7 @@
             "objectName": "argent"
           },
           {
-            "objectName": "NewText"
+            "objectName": "cointext"
           }
         ]
       },
@@ -10817,6 +10786,17 @@
                 "playerY",
                 "=",
                 "Player.PointY(\"\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "cointext",
+                "Text",
+                "=",
+                "\"x\" + coins"
               ]
             }
           ]
@@ -19414,6 +19394,133 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Menu_32pause",
+      "name": "Menu pause",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.546875,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 720,
+          "keepRatio": true,
+          "layer": "",
+          "name": "background",
+          "persistentUuid": "7a53327f-38e5-43fc-b9a3-dee96efc8f60",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "background",
+          "texture": "pause.jpg",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "background"
+          }
+        ]
+      },
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
         }
       ]
     }
