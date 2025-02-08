@@ -12261,6 +12261,31 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PushScene"
+              },
+              "parameters": [
+                "",
+                "\"Menu pause\""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -20676,7 +20701,7 @@
           "height": 106,
           "keepRatio": true,
           "layer": "",
-          "name": "GreenButton",
+          "name": "Reprendre",
           "persistentUuid": "03925c0e-de0e-409c-b69e-2cb9cda453ad",
           "width": 320,
           "x": 489,
@@ -21541,7 +21566,7 @@
         },
         {
           "assetStoreId": "b44dba91245ff1ac84a7b450e078194f19321d135fd8a67cd19bc9cb3403fba5",
-          "name": "GreenButton",
+          "name": "Reprendre",
           "type": "PanelSpriteButton::PanelSpriteButton",
           "variables": [],
           "effects": [],
@@ -23232,7 +23257,7 @@
           "childrenContent": {
             "Dialogue": {
               "content": {
-                "text": "Fonction en developpement!",
+                "text": "Etes-vous sur de vouloir quitter? Cela \nreinitialisera votre progression.",
                 "opacity": 255,
                 "scale": 2,
                 "fontSize": 20,
@@ -23513,14 +23538,116 @@
             "objectName": "Quitter"
           },
           {
-            "objectName": "GreenButton"
+            "objectName": "Reprendre"
           },
           {
             "objectName": "TwoChoicesDialogBox"
           }
         ]
       },
-      "events": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "Quitter",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "TwoChoicesDialogBox",
+                "356",
+                "253",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsYesClicked"
+              },
+              "parameters": [
+                "TwoChoicesDialogBox",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Quit"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsNoClicked"
+              },
+              "parameters": [
+                "TwoChoicesDialogBox",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "TwoChoicesDialogBox",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "Reprendre",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PopScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 200,
