@@ -23249,10 +23249,10 @@
           "effects": [],
           "behaviors": [],
           "content": {
-            "LabelButtonID0": "Ok",
-            "LabelButtonID1": "Annuler",
+            "LabelButtonID0": "Oui",
+            "LabelButtonID1": "Non",
             "EnableEscape": true,
-            "TextMessage": "Fonction en developpement!"
+            "TextMessage": "Etes-vous sur de vouloir quitter? Cela reinitialisera votre progression."
           },
           "childrenContent": {
             "Dialogue": {
