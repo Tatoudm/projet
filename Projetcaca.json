@@ -4097,6 +4097,11 @@
           "name": "playerX",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "invincible",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -11601,9 +11606,9 @@
           "behaviors": [
             {
               "name": "Platform",
+              "platformType": "Jumpthru",
               "type": "PlatformBehavior::PlatformBehavior",
               "canBeGrabbed": true,
-              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -11845,7 +11850,28 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "bottomEdgeAnchor": 1,
+              "leftEdgeAnchor": 1,
+              "name": "Anchor",
+              "relativeToOriginalWindowSize": true,
+              "rightEdgeAnchor": 1,
+              "topEdgeAnchor": 1,
+              "type": "AnchorBehavior::AnchorBehavior",
+              "useLegacyBottomAndRightAnchors": false
+            },
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -12024,6 +12050,29 @@
                 "CurrentSceneName()"
               ]
             },
+            {
+              "type": {
+                "value": "CacheSouris"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneJustResumed"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
             {
               "type": {
                 "value": "CacheSouris"
@@ -12319,9 +12368,28 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "invincible",
+                "=",
+                "0"
+              ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateJumpKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
             {
               "type": {
                 "value": "TiledUnitsBar::TiledUnitsBar::SetValue"
@@ -12335,11 +12403,30 @@
             },
             {
               "type": {
-                "value": "PlatformBehavior::SimulateJumpKey"
+                "value": "SetNumberVariable"
               },
               "parameters": [
-                "Player",
-                "PlatformerObject"
+                "invincible",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "invincible",
+                "=",
+                "0"
               ]
             }
           ]
@@ -12400,12 +12487,11 @@
           "conditions": [
             {
               "type": {
-                "value": "SourisSurObjet"
+                "value": "ButtonStates::ButtonFSM::IsClicked"
               },
               "parameters": [
                 "Pause",
-                "",
-                "",
+                "ButtonFSM",
                 ""
               ]
             }
@@ -23694,6 +23780,29 @@
           "conditions": [
             {
               "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MontreSouris"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
               },
               "parameters": [
@@ -23712,14 +23821,6 @@
                 "TwoChoicesDialogBox",
                 "356",
                 "253",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "MontreSouris"
-              },
-              "parameters": [
                 ""
               ]
             }
