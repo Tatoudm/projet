@@ -2304,6 +2304,14 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/GDevelop examples/Platformer/Background/e10d4d02f445ddc7daf068b27546f89a8fe1f2ecb3e5c8ce21a73c8dbc8234b7_tiled_Background.png",
           "name": "tiled_Background.png"
         }
+      },
+      {
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2723,16 +2731,15 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 721,
+          "height": 720,
           "keepRatio": true,
-          "layer": "",
-          "locked": true,
+          "layer": "Background",
           "name": "Background",
           "persistentUuid": "4c25f4f5-d60e-4db6-a1f1-aab5fe70a78f",
-          "width": 1282,
-          "x": 1,
-          "y": 1,
-          "zOrder": 9,
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": -10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2747,8 +2754,8 @@
           "name": "Platform1",
           "persistentUuid": "71d1f5de-595e-4c51-9215-33a8473eeebf",
           "width": 270,
-          "x": 37,
-          "y": 310,
+          "x": 63,
+          "y": 308,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -2779,25 +2786,9 @@
           "name": "SpawnPoint",
           "persistentUuid": "ff83393a-db3c-4725-8cbd-63d9656518d0",
           "width": 0,
-          "x": 463,
-          "y": -211,
+          "x": 132,
+          "y": 190,
           "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platformer_Character",
-          "persistentUuid": "2fa3ca4a-95c3-4e70-9cee-dfd13f4da1b2",
-          "width": 0,
-          "x": 639,
-          "y": -163,
-          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2811,9 +2802,26 @@
           "name": "GreenHero",
           "persistentUuid": "82066a55-9e7c-4570-a87b-87e9589c77a6",
           "width": 0,
-          "x": 86,
-          "y": 232,
+          "x": 115,
+          "y": 171,
           "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 67,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Hitbox",
+          "persistentUuid": "c0dabc73-9e4a-4333-83da-f1fc0d2742b5",
+          "width": 266,
+          "x": 64,
+          "y": 319,
+          "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4324,7 +4332,88 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "PlatformerMultitouchMapper",
+              "type": "SpriteMultitouchJoystick::PlatformerMultitouchMapper",
+              "Property": "PlatformerObject",
+              "ControllerIdentifier": 1,
+              "JoystickIdentifier": "Primary",
+              "JumpButton": "A"
+            },
+            {
+              "acceleration": 1000,
+              "canGoDownFromJumpthru": true,
+              "canGrabPlatforms": false,
+              "canGrabWithoutMoving": false,
+              "deceleration": 1500,
+              "gravity": 1050,
+              "ignoreDefaultControls": false,
+              "jumpSpeed": 717,
+              "jumpSustainTime": 0.3,
+              "ladderClimbingSpeed": 200,
+              "maxFallingSpeed": 800,
+              "maxSpeed": 400,
+              "name": "PlatformerObject",
+              "slopeMaxAngle": 60,
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "useLegacyTrajectory": false,
+              "xGrabTolerance": 10,
+              "yGrabOffset": 0
+            },
+            {
+              "name": "SmoothCamera",
+              "type": "SmoothCamera::SmoothCamera",
+              "LeftwardSpeed": 0.9,
+              "RightwardSpeed": 0.9,
+              "UpwardSpeed": 0.95,
+              "DownwardSpeed": 0.9,
+              "FollowOnX": true,
+              "FollowOnY": true,
+              "FollowFreeAreaLeft": 0,
+              "FollowFreeAreaRight": 0,
+              "FollowFreeAreaTop": 0,
+              "FollowFreeAreaBottom": 0,
+              "CameraOffsetX": 0,
+              "CameraOffsetY": 0,
+              "CameraDelay": 0,
+              "ForecastTime": 0,
+              "ForecastHistoryDuration": 0,
+              "LogLeftwardSpeed": 2.0247e-320,
+              "LogRightwardSpeed": 2.0247e-320,
+              "LogDownwardSpeed": 2.0247e-320,
+              "LogUpwardSpeed": 2.0247e-320,
+              "DelayedCenterX": 2.0247e-320,
+              "DelayedCenterY": 2.0247e-320,
+              "ForecastHistoryMeanX": 2.0247e-320,
+              "ForecastHistoryMeanY": 2.0247e-320,
+              "ForecastHistoryVarianceX": 2.0247e-320,
+              "ForecastHistoryCovariance": 2.0247e-320,
+              "ForecastHistoryLinearA": 2.0247e-320,
+              "ForecastHistoryLinearB": 2.0247e-320,
+              "ForecastedX": 2.0247e-320,
+              "ForecastedY": 2.0247e-320,
+              "ProjectedNewestX": 2.0247e-320,
+              "ProjectedNewestY": 2.0247e-320,
+              "ProjectedOldestX": 2.0247e-320,
+              "ProjectedOldestY": 2.0247e-320,
+              "ForecastHistoryVarianceY": 2.0247e-320,
+              "Index": 2.0247e-320,
+              "CameraDelayCatchUpSpeed": 0,
+              "CameraExtraDelay": 2.0247e-320,
+              "WaitingSpeedXMax": 2.0247e-320,
+              "WaitingSpeedYMax": 2.0247e-320,
+              "WaitingEnd": 2.0247e-320,
+              "CameraDelayCatchUpDuration": 2.0247e-320,
+              "LeftwardSpeedMax": 9000,
+              "RightwardSpeedMax": 9000,
+              "UpwardSpeedMax": 9000,
+              "DownwardSpeedMax": 9000,
+              "OldX": 9000.000000007454,
+              "OldY": 9000.000000007454,
+              "IsCalledManually": false
+            }
+          ],
           "animations": [
             {
               "name": "Idle",
@@ -8464,15 +8553,7 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [
-            {
-              "canBeGrabbed": true,
-              "name": "Platform",
-              "platformType": "NormalPlatform",
-              "type": "PlatformBehavior::PlatformBehavior",
-              "yGrabOffset": 0
-            }
-          ],
+          "behaviors": [],
           "animations": [
             {
               "name": "",
@@ -10058,6 +10139,56 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Hitbox",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -10065,6 +10196,9 @@
         "children": [
           {
             "objectName": "Platformer_Character"
+          },
+          {
+            "objectName": "Hitbox"
           },
           {
             "objectName": "Coins"
@@ -10241,7 +10375,7 @@
               "parameters": [
                 "playerX",
                 "=",
-                "Platformer_Character.PointX(\"\")"
+                "GreenHero.PointX(\"\")"
               ]
             },
             {
@@ -10251,7 +10385,7 @@
               "parameters": [
                 "playerY",
                 "=",
-                "Platformer_Character.PointY(\"\")"
+                "GreenHero.PointY(\"\")"
               ]
             }
           ]
@@ -10276,11 +10410,144 @@
                 "value": "MettreXY"
               },
               "parameters": [
-                "Platformer_Character",
+                "GreenHero",
                 "=",
                 "spawnX",
                 "=",
                 "spawnY"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+              },
+              "parameters": [
+                "GreenHero",
+                "PlatformerObject",
+                "\"Left\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "GreenHero",
+                "Animation",
+                "=",
+                "\"Run\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FlippableCapability::FlippableBehavior::FlipX"
+              },
+              "parameters": [
+                "GreenHero",
+                "Flippable",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+              },
+              "parameters": [
+                "GreenHero",
+                "PlatformerObject",
+                "\"Right\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "GreenHero",
+                "Animation",
+                "=",
+                "\"Run\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FlippableCapability::FlippableBehavior::FlipX"
+              },
+              "parameters": [
+                "GreenHero",
+                "Flippable",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+              },
+              "parameters": [
+                "GreenHero",
+                "PlatformerObject",
+                "\"Jump\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "GreenHero",
+                "Animation",
+                "=",
+                "\"Jump\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+              },
+              "parameters": [
+                "GreenHero",
+                "PlatformerObject",
+                "\"Jump\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "GreenHero",
+                "Animation",
+                "=",
+                "\"Idle\""
               ]
             }
           ]
