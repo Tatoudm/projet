@@ -201,7 +201,13 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "lancement",
+      "type": "number",
+      "value": 0
+    }
+  ],
   "layouts": [
     {
       "b": 255,
@@ -274,11 +280,6 @@
         },
         {
           "name": "playerX",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "lancement",
           "type": "number",
           "value": 0
         }
@@ -1062,7 +1063,7 @@
               },
               "parameters": [
                 "lancement",
-                "=",
+                "+",
                 "1"
               ]
             },
