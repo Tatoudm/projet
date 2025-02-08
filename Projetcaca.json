@@ -276,6 +276,11 @@
           "name": "playerX",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "lancement",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -1046,9 +1051,29 @@
               "parameters": [
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "lancement",
+                "=",
+                "0"
+              ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "lancement",
+                "=",
+                "1"
+              ]
+            },
             {
               "type": {
                 "value": "PushScene"
