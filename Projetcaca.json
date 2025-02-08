@@ -3687,7 +3687,7 @@
     {
       "name": "vie",
       "type": "number",
-      "value": 0
+      "value": 5
     },
     {
       "name": "vieMax",
@@ -3984,14 +3984,15 @@
                 "let encryptedData = gdjs.evtTools.storage.readString(\"Save\", \"gameData\");",
                 "",
                 "if (encryptedData) {",
-                "    const jsonData = atob(encryptedData); ",
+                "    const jsonData = atob(encryptedData);",
                 "    const saveData = JSON.parse(jsonData);",
                 "",
-                "    runtimeScene.getVariables().get(\"lastScene\").setString(saveData.lastScene);",
-                "    runtimeScene.getVariables().get(\"vie\").setNumber(saveData.vie);",
-                "    runtimeScene.getVariables().get(\"vieMax\").setNumber(saveData.vieMax);",
-                "    runtimeScene.getVariables().get(\"coins\").setNumber(saveData.coins);",
-                "}"
+                "    runtimeScene.getGame().getVariables().get(\"lastScene\").setString(saveData.lastScene);",
+                "    runtimeScene.getGame().getVariables().get(\"vie\").setNumber(saveData.vie);",
+                "    runtimeScene.getGame().getVariables().get(\"vieMax\").setNumber(saveData.vieMax);",
+                "    runtimeScene.getGame().getVariables().get(\"coins\").setNumber(saveData.coins);",
+                "}",
+                ""
               ],
               "parameterObjects": "",
               "useStrict": true,
@@ -24012,16 +24013,17 @@
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
                 "const saveData = {",
-                "    lastScene: runtimeScene.getVariables().get(\"lastScene\").getString(),",
-                "    vie: runtimeScene.getVariables().get(\"vie\").getAsNumber(),",
-                "    vieMax: runtimeScene.getVariables().get(\"vieMax\").getAsNumber(),",
-                "    coins: runtimeScene.getVariables().get(\"coins\").getAsNumber(),",
+                "    lastScene: runtimeScene.getGame().getVariables().get(\"lastScene\").getAsString(),",
+                "    vie: runtimeScene.getGame().getVariables().get(\"vie\").getAsNumber(),",
+                "    vieMax: runtimeScene.getGame().getVariables().get(\"vieMax\").getAsNumber(),",
+                "    totalCoins: runtimeScene.getGame().getVariables().get(\"coins\").getAsNumber()",
                 "};",
                 "",
                 "const jsonData = JSON.stringify(saveData);",
                 "const encryptedData = btoa(jsonData);",
                 "",
                 "gdjs.evtTools.storage.writeString(\"Save\", \"gameData\", encryptedData);",
+                "",
                 ""
               ],
               "parameterObjects": "",
