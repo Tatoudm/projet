@@ -2430,7 +2430,7 @@
     {
       "name": "respawn",
       "type": "string",
-      "value": "Scene Logo"
+      "value": "Lobby"
     }
   ],
   "layouts": [
@@ -2632,11 +2632,12 @@
             },
             {
               "type": {
-                "value": "PushScene"
+                "value": "Scene"
               },
               "parameters": [
                 "",
-                "\"Lobby\""
+                "\"Lobby\"",
+                ""
               ]
             }
           ]
@@ -3115,6 +3116,22 @@
           "x": 42,
           "y": 48,
           "zOrder": 26,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "test",
+          "persistentUuid": "e32d686f-e6ec-459e-adf8-1c8fd9228601",
+          "width": 0,
+          "x": 186,
+          "y": 137,
+          "zOrder": 27,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -10666,6 +10683,48 @@
               "width": 16
             }
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "test",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -10746,6 +10805,9 @@
             "objectName": "Background"
           },
           {
+            "objectName": "test"
+          },
+          {
             "objectName": "Pic"
           },
           {
@@ -10785,16 +10847,6 @@
                 "spawnY",
                 "=",
                 "SpawnPoint.PointY(\"\")"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetStringVariable"
-              },
-              "parameters": [
-                "respawn",
-                "=",
-                "CurrentSceneName()"
               ]
             }
           ]
@@ -10882,6 +10934,16 @@
                 "playerY",
                 "=",
                 "Player.PointY(\"\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "respawn",
+                "=",
+                "CurrentSceneName()"
               ]
             }
           ]
@@ -19400,7 +19462,7 @@
               },
               "parameters": [
                 "",
-                "\"Lobby\"",
+                "Variable(respawn)",
                 ""
               ]
             }
