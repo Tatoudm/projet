@@ -1046,14 +1046,6 @@
           "conditions": [
             {
               "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "NumberVariable"
               },
               "parameters": [
