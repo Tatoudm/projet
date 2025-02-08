@@ -2426,7 +2426,13 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "respawn",
+      "type": "string",
+      "value": "Scene Logo"
+    }
+  ],
   "layouts": [
     {
       "b": 255,
@@ -10779,6 +10785,16 @@
                 "spawnY",
                 "=",
                 "SpawnPoint.PointY(\"\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "respawn",
+                "=",
+                "CurrentSceneName()"
               ]
             }
           ]
@@ -19380,10 +19396,12 @@
           "actions": [
             {
               "type": {
-                "value": "PopScene"
+                "value": "Scene"
               },
               "parameters": [
-                ""
+                "",
+                "ToString(Variable(Scene))",
+                "yes"
               ]
             }
           ]
