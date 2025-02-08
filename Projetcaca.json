@@ -5669,7 +5669,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.0417,
+                  "timeBetweenFrames": 0.1,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -10455,6 +10455,37 @@
                 "yes"
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                  },
+                  "parameters": [
+                    "GreenHero",
+                    "PlatformerObject",
+                    "\"Left\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "GreenHero",
+                    "Animation",
+                    "=",
+                    "\"Idle\""
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -10493,6 +10524,37 @@
                 "no"
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                  },
+                  "parameters": [
+                    "GreenHero",
+                    "PlatformerObject",
+                    "\"Right\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "GreenHero",
+                    "Animation",
+                    "=",
+                    "\"Idle\""
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -10521,36 +10583,43 @@
                 "\"Jump\""
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                  },
+                  "parameters": [
+                    "GreenHero",
+                    "PlatformerObject",
+                    "\"Jump\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "GreenHero",
+                    "Animation",
+                    "=",
+                    "\"Idle\""
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
-              },
-              "parameters": [
-                "GreenHero",
-                "PlatformerObject",
-                "\"Jump\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "GreenHero",
-                "Animation",
-                "=",
-                "\"Idle\""
-              ]
-            }
-          ]
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
