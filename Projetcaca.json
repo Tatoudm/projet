@@ -2417,6 +2417,21 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/5e2e3fcc57885d5e510934e621be5f8dd7a5b6425cf46ef38073e3d2c3b04048_Kenney Mini Square.ttf",
           "name": "Kenney Mini Square.ttf"
         }
+      },
+      {
+        "file": "téléchargement (4).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "téléchargement (4).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Retro Gaming.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Retro Gaming.ttf",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2488,6 +2503,22 @@
           "x": 292,
           "y": 610,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Version",
+          "persistentUuid": "c5f5e138-33ef-40b5-b649-c27b6cb4768c",
+          "width": 0,
+          "x": 1170,
+          "y": 677,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2595,6 +2626,48 @@
             "characterSize": 50,
             "color": "0;0;0"
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Version",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "V1.1.0",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "V1.1.0",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -2605,6 +2678,9 @@
           },
           {
             "objectName": "Chargement"
+          },
+          {
+            "objectName": "Version"
           }
         ]
       },
@@ -2748,9 +2824,6 @@
           "name": "Truc normaux",
           "objects": [
             {
-              "name": "Platformer_Character"
-            },
-            {
               "name": "Coins"
             },
             {
@@ -2825,22 +2898,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "CoinsText",
-          "persistentUuid": "1c39347d-e260-4323-b26e-955de8a70dea",
-          "width": 0,
-          "x": 974,
-          "y": 61,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 720,
@@ -2870,22 +2927,6 @@
           "x": 63,
           "y": 308,
           "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Fly",
-          "persistentUuid": "a51bae1c-e1a7-48ae-8e50-771c48b52e2b",
-          "width": 0,
-          "x": 919,
-          "y": 141,
-          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3125,160 +3166,52 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
-          "name": "test",
-          "persistentUuid": "e32d686f-e6ec-459e-adf8-1c8fd9228601",
+          "layer": "Background",
+          "name": "Clouds",
+          "persistentUuid": "ecf2b2fe-4167-4e12-9675-6bc93b950a4d",
           "width": 0,
-          "x": 186,
-          "y": 137,
+          "x": 144,
+          "y": -2,
           "zOrder": 27,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "Moon",
+          "persistentUuid": "2fba8888-6fb8-435d-a341-bdc25a2d62c8",
+          "width": 0,
+          "x": 1114,
+          "y": -63,
+          "zOrder": 28,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 35,
+          "keepRatio": true,
+          "layer": "",
+          "name": "argent",
+          "persistentUuid": "6003248e-d025-4232-a0ec-233c6abad368",
+          "width": 65,
+          "x": 128,
+          "y": 36,
+          "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
       "objects": [
-        {
-          "adaptCollisionMaskAutomatically": false,
-          "assetStoreId": "",
-          "name": "Platformer_Character",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "PlatformerMultitouchMapper",
-              "type": "SpriteMultitouchJoystick::PlatformerMultitouchMapper",
-              "Property": "PlatformerObject",
-              "ControllerIdentifier": 1,
-              "JoystickIdentifier": "Primary",
-              "JumpButton": "A"
-            },
-            {
-              "name": "PlatformerObject",
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
-              "acceleration": 1000,
-              "canGoDownFromJumpthru": true,
-              "canGrabPlatforms": false,
-              "canGrabWithoutMoving": false,
-              "deceleration": 1500,
-              "gravity": 1050,
-              "ignoreDefaultControls": false,
-              "jumpSpeed": 717,
-              "jumpSustainTime": 0.3,
-              "ladderClimbingSpeed": 200,
-              "maxFallingSpeed": 800,
-              "maxSpeed": 400,
-              "slopeMaxAngle": 60,
-              "useLegacyTrajectory": false,
-              "xGrabTolerance": 10,
-              "yGrabOffset": 0
-            },
-            {
-              "name": "SmoothCamera",
-              "type": "SmoothCamera::SmoothCamera",
-              "LeftwardSpeed": 0.9,
-              "RightwardSpeed": 0.9,
-              "UpwardSpeed": 0.95,
-              "DownwardSpeed": 0.95,
-              "FollowOnX": true,
-              "FollowOnY": true,
-              "FollowFreeAreaLeft": 0,
-              "FollowFreeAreaRight": 0,
-              "FollowFreeAreaTop": 0,
-              "FollowFreeAreaBottom": 0,
-              "CameraOffsetX": 0,
-              "CameraOffsetY": 0,
-              "CameraDelay": 0,
-              "ForecastTime": 0,
-              "ForecastHistoryDuration": 0,
-              "LogLeftwardSpeed": 2.0247e-320,
-              "LogRightwardSpeed": 2.0247e-320,
-              "LogDownwardSpeed": 2.0247e-320,
-              "LogUpwardSpeed": 2.0247e-320,
-              "DelayedCenterX": 2.0247e-320,
-              "DelayedCenterY": 2.0247e-320,
-              "ForecastHistoryMeanX": 2.0247e-320,
-              "ForecastHistoryMeanY": 2.0247e-320,
-              "ForecastHistoryVarianceX": 2.0247e-320,
-              "ForecastHistoryCovariance": 2.0247e-320,
-              "ForecastHistoryLinearA": 2.0247e-320,
-              "ForecastHistoryLinearB": 2.0247e-320,
-              "ForecastedX": 2.0247e-320,
-              "ForecastedY": 2.0247e-320,
-              "ProjectedNewestX": 2.0247e-320,
-              "ProjectedNewestY": 2.0247e-320,
-              "ProjectedOldestX": 2.0247e-320,
-              "ProjectedOldestY": 2.0247e-320,
-              "ForecastHistoryVarianceY": 2.0247e-320,
-              "Index": 2.0247e-320,
-              "CameraDelayCatchUpSpeed": 0,
-              "CameraExtraDelay": 2.0247e-320,
-              "WaitingSpeedXMax": 2.0247e-320,
-              "WaitingSpeedYMax": 2.0247e-320,
-              "WaitingEnd": 2.0247e-320,
-              "CameraDelayCatchUpDuration": 2.0247e-320,
-              "LeftwardSpeedMax": 9000,
-              "RightwardSpeedMax": 9000,
-              "UpwardSpeedMax": 9000,
-              "DownwardSpeedMax": 9000,
-              "OldX": 9000.000000007454,
-              "OldY": 9000.000000007454,
-              "IsCalledManually": false
-            }
-          ],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 2
-                          },
-                          {
-                            "x": 64,
-                            "y": 2
-                          },
-                          {
-                            "x": 64,
-                            "y": 64
-                          },
-                          {
-                            "x": 0,
-                            "y": 64
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
@@ -3517,59 +3450,6 @@
                 }
               ]
             }
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "CoinsText",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Anchor",
-              "type": "AnchorBehavior::AnchorBehavior",
-              "bottomEdgeAnchor": 1,
-              "leftEdgeAnchor": 2,
-              "relativeToOriginalWindowSize": true,
-              "rightEdgeAnchor": 2,
-              "topEdgeAnchor": 1,
-              "useLegacyBottomAndRightAnchors": false
-            }
-          ],
-          "string": "",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 20,
-            "color": "0;0;0"
           }
         },
         {
@@ -10503,67 +10383,6 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "NewSprite",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Pic",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Pic",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 16,
-                            "y": 41
-                          },
-                          {
-                            "x": 48,
-                            "y": 41
-                          },
-                          {
-                            "x": 48,
-                            "y": 64
-                          },
-                          {
-                            "x": 16,
-                            "y": 64
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
           "name": "Pic",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -10685,10 +10504,81 @@
           }
         },
         {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "argent",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "bottomEdgeAnchor": 1,
+              "leftEdgeAnchor": 1,
+              "name": "Anchor",
+              "relativeToOriginalWindowSize": true,
+              "rightEdgeAnchor": 1,
+              "topEdgeAnchor": 1,
+              "type": "AnchorBehavior::AnchorBehavior",
+              "useLegacyBottomAndRightAnchors": false
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "téléchargement (4).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 52,
+                            "y": 5
+                          },
+                          {
+                            "x": 281,
+                            "y": 5
+                          },
+                          {
+                            "x": 281,
+                            "y": 142
+                          },
+                          {
+                            "x": 52,
+                            "y": 142
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "test",
+          "name": "NewText",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
@@ -10696,7 +10586,7 @@
           "effects": [],
           "behaviors": [],
           "string": "",
-          "font": "",
+          "font": "Retro Gaming.ttf",
           "textAlignment": "left",
           "characterSize": 20,
           "color": {
@@ -10719,7 +10609,7 @@
             "smoothed": true,
             "underlined": false,
             "text": "",
-            "font": "",
+            "font": "Retro Gaming.ttf",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
             "characterSize": 20,
@@ -10730,9 +10620,6 @@
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
-          {
-            "objectName": "Platformer_Character"
-          },
           {
             "objectName": "Hitbox"
           },
@@ -10751,9 +10638,6 @@
             ]
           },
           {
-            "objectName": "CoinsText"
-          },
-          {
             "objectName": "SpawnPoint"
           },
           {
@@ -10761,9 +10645,6 @@
           },
           {
             "objectName": "Monster"
-          },
-          {
-            "objectName": "NewSprite"
           },
           {
             "objectName": "Fly"
@@ -10805,13 +10686,16 @@
             "objectName": "Background"
           },
           {
-            "objectName": "test"
-          },
-          {
             "objectName": "Pic"
           },
           {
             "objectName": "PixelHeartBar"
+          },
+          {
+            "objectName": "argent"
+          },
+          {
+            "objectName": "NewText"
           }
         ]
       },
@@ -10915,17 +10799,6 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "CoinsText",
-                "Text",
-                "=",
-                "\"Coins: \" + ToString(Variable(coins))"
-              ]
-            },
             {
               "type": {
                 "value": "SetNumberVariable"
