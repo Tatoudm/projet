@@ -3981,10 +3981,10 @@
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
-                "let encryptedData = gdjs.evtTools.storage.readString(\"Save\", \"gameData\");",
+                "let encryptedData = gdjs.evtTools.storage.readLocalStorage(\"gameData\");",
                 "",
                 "if (encryptedData) {",
-                "    const jsonData = atob(encryptedData);",
+                "    const jsonData = atob(encryptedData); ",
                 "    const saveData = JSON.parse(jsonData);",
                 "",
                 "    runtimeScene.getGame().getVariables().get(\"lastScene\").setString(saveData.lastScene);",
@@ -3992,6 +3992,7 @@
                 "    runtimeScene.getGame().getVariables().get(\"vieMax\").setNumber(saveData.vieMax);",
                 "    runtimeScene.getGame().getVariables().get(\"coins\").setNumber(saveData.coins);",
                 "}",
+                "",
                 ""
               ],
               "parameterObjects": "",
@@ -24016,15 +24017,13 @@
                 "    lastScene: runtimeScene.getGame().getVariables().get(\"lastScene\").getAsString(),",
                 "    vie: runtimeScene.getGame().getVariables().get(\"vie\").getAsNumber(),",
                 "    vieMax: runtimeScene.getGame().getVariables().get(\"vieMax\").getAsNumber(),",
-                "    totalCoins: runtimeScene.getGame().getVariables().get(\"coins\").getAsNumber()",
+                "    coins: runtimeScene.getGame().getVariables().get(\"coins\").getAsNumber()",
                 "};",
                 "",
                 "const jsonData = JSON.stringify(saveData);",
                 "const encryptedData = btoa(jsonData);",
                 "",
-                "gdjs.evtTools.storage.writeString(\"Save\", \"gameData\", encryptedData);",
-                "",
-                ""
+                "gdjs.evtTools.storage.writeLocalStorage(\"gameData\", encryptedData);"
               ],
               "parameterObjects": "",
               "useStrict": true,
