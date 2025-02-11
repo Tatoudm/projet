@@ -19,12 +19,12 @@
     "sizeOnStartupMode": "",
     "templateSlug": "starting-platformer",
     "version": "1.0.0",
-    "name": "Projetcaca",
+    "name": "Beyond The Horizon",
     "description": "",
     "author": "",
     "windowWidth": 1280,
     "windowHeight": 720,
-    "latestCompilationDirectory": "C:\\Users\\natha\\Projet jeu\\jeu",
+    "latestCompilationDirectory": "C:\\Users\\natha\\Projet jeu\\win",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -3680,22 +3680,22 @@
       "value": "Scene Logo"
     },
     {
-      "name": "coins",
+      "name": "coinsg",
       "type": "number",
       "value": 0
     },
     {
-      "name": "vie",
+      "name": "vieg",
       "type": "number",
       "value": 5
     },
     {
-      "name": "vieMax",
+      "name": "vieMaxg",
       "type": "number",
       "value": 5
     },
     {
-      "name": "lastScene",
+      "name": "lastSceneg",
       "type": "string",
       "value": "Scene Logo"
     }
@@ -3972,38 +3972,469 @@
               },
               "parameters": [
                 "",
-                "\"Lobby\"",
+                "\"Menu start\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
+    {
+      "b": 255,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Chargement",
+      "name": "Chargement",
+      "r": 255,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 255,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.546875,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [
+        {
+          "name": "vie",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vieMax",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "coins",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lastScene",
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Logo",
+          "persistentUuid": "e8b94026-2722-4f40-892e-0424b8e9610c",
+          "width": 0,
+          "x": 385,
+          "y": 101,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Chargement",
+          "persistentUuid": "b5a35929-5d93-4443-b6c1-f6b971ee7023",
+          "width": 0,
+          "x": 292,
+          "y": 610,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Version",
+          "persistentUuid": "c5f5e138-33ef-40b5-b649-c27b6cb4768c",
+          "width": 0,
+          "x": 1170,
+          "y": 677,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Logo",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "logoNathaCorpStudio.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 500,
+                            "y": 0
+                          },
+                          {
+                            "x": 500,
+                            "y": 500
+                          },
+                          {
+                            "x": 0,
+                            "y": 500
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Chargement",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Chargement veuillez patientez...",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 50,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Chargement veuillez patientez...",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 50,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Version",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "V1.1.0",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "V1.1.0",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Logo"
+          },
+          {
+            "objectName": "Chargement"
+          },
+          {
+            "objectName": "Version"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
                 ""
               ]
             }
           ],
-          "events": [
+          "actions": [
             {
-              "type": "BuiltinCommonInstructions::JsCode",
-              "inlineCode": [
-                "gdjs.extensions.LocalFileSave.loadFromFile(\"save.dat\")",
-                "    .then(encryptedData => {",
-                "        if (encryptedData) {",
-                "            try {",
-                "                const jsonData = atob(encryptedData);",
-                "                const saveData = JSON.parse(jsonData);",
-                "                ",
-                "                runtimeScene.getGame().getVariables().get(\"lastScene\").setString(saveData.lastScene);",
-                "                runtimeScene.getGame().getVariables().get(\"vie\").setNumber(saveData.vie);",
-                "                runtimeScene.getGame().getVariables().get(\"vieMax\").setNumber(saveData.vieMax);",
-                "                runtimeScene.getGame().getVariables().get(\"coins\").setNumber(saveData.coins);",
-                "            } catch (e) {",
-                "                console.error(\"Erreur lors de la lecture:\", e);",
-                "            }",
-                "        }",
-                "    })",
-                "    .catch(error => {",
-                "        console.error(\"Erreur de chargement:\", error);",
-                "    });"
-              ],
-              "parameterObjects": "",
-              "useStrict": true,
-              "eventsSheetExpanded": false
+              "type": {
+                "value": "CacheSouris"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::LoadVariableFromJSONFileSync"
+              },
+              "parameters": [
+                "vie",
+                "\"save0.json\"",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::LoadVariableFromJSONFileSync"
+              },
+              "parameters": [
+                "vieMax",
+                "\"save1.json\"",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::LoadVariableFromJSONFileSync"
+              },
+              "parameters": [
+                "coins",
+                "\"save2.json\"",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::LoadVariableFromJSONFileSync"
+              },
+              "parameters": [
+                "lastScene",
+                "\"save3.json\"",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "vieg",
+                "=",
+                "vie"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "vieMaxg",
+                "=",
+                "vieMax"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "coinsg",
+                "=",
+                "coins"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "lastSceneg",
+                "=",
+                "lastScene"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "lastSceneg",
+                ""
+              ]
             }
           ]
         }
@@ -4525,6 +4956,22 @@
           "x": 15,
           "y": 20,
           "zOrder": 31,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "test",
+          "persistentUuid": "40988270-d441-4aeb-9f57-2075b44f496a",
+          "width": 0,
+          "x": 192,
+          "y": 351,
+          "zOrder": 32,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -11966,6 +12413,48 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "test",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -12047,6 +12536,9 @@
           },
           {
             "objectName": "cointext"
+          },
+          {
+            "objectName": "test"
           }
         ]
       },
@@ -12170,7 +12662,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "coins",
+                "coinsg",
                 "+",
                 "1"
               ]
@@ -12209,7 +12701,7 @@
                 "cointext",
                 "Text",
                 "=",
-                "\"x\" + coins"
+                "\"x\" + coinsg"
               ]
             },
             {
@@ -12219,7 +12711,7 @@
               "parameters": [
                 "PixelHeartBar",
                 "=",
-                "vie",
+                "vieg",
                 ""
               ]
             },
@@ -12230,7 +12722,7 @@
               "parameters": [
                 "PixelHeartBar",
                 "=",
-                "vieMax",
+                "vieMaxg",
                 ""
               ]
             }
@@ -12471,7 +12963,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "vie",
+                "vieg",
                 "-",
                 "1"
               ]
@@ -12515,7 +13007,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "coins",
+                "coinsg",
                 "=",
                 "0"
               ]
@@ -12560,7 +13052,7 @@
                 "value": "SetStringVariable"
               },
               "parameters": [
-                "lastScene",
+                "lastSceneg",
                 "=",
                 "CurrentSceneName()"
               ]
@@ -20849,6 +21341,16 @@
               "parameters": [
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "vieg",
+                "=",
+                "5"
+              ]
             }
           ]
         },
@@ -20972,7 +21474,28 @@
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "vie",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "coins",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vieMax",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "lastScene",
+          "type": "string",
+          "value": ""
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -24217,6 +24740,105 @@
           "actions": [
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "vie",
+                "=",
+                "vieg"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "coins",
+                "=",
+                "coinsg"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "vieMax",
+                "=",
+                "vieMaxg"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "lastScene",
+                "=",
+                "lastSceneg"
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::SaveVariableToJSONFileSync"
+              },
+              "parameters": [
+                "vie",
+                "\"save0.json\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::SaveVariableToJSONFileSync"
+              },
+              "parameters": [
+                "vieMax",
+                "\"save1.json\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::SaveVariableToJSONFileSync"
+              },
+              "parameters": [
+                "coins",
+                "\"save2.json\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::SaveVariableToJSONFileSync"
+              },
+              "parameters": [
+                "lastScene",
+                "\"save3.json\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::DeleteFile"
+              },
+              "parameters": [
+                "\"save.json\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::SaveStringToFileSync"
+              },
+              "parameters": [
+                "\"no\"",
+                "\"save.json\"",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Create"
               },
               "parameters": [
@@ -24226,33 +24848,6 @@
                 "253",
                 ""
               ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::JsCode",
-              "inlineCode": [
-                "const saveData = {",
-                "    lastScene: runtimeScene.getGame().getVariables().get(\"lastScene\").getAsString(),",
-                "    vie: runtimeScene.getGame().getVariables().get(\"vie\").getAsNumber(),",
-                "    vieMax: runtimeScene.getGame().getVariables().get(\"vieMax\").getAsNumber(),",
-                "    coins: runtimeScene.getGame().getVariables().get(\"coins\").getAsNumber()",
-                "};",
-                "",
-                "const jsonData = JSON.stringify(saveData);",
-                "const encryptedData = btoa(jsonData);",
-                "",
-                "gdjs.extensions.LocalFileSave.saveToFile(encryptedData, \"save.dat\")",
-                "    .then(() => {",
-                "        console.log(\"Sauvegarde réussie\");",
-                "    })",
-                "    .catch(error => {",
-                "        console.error(\"Erreur de sauvegarde:\", error);",
-                "    });"
-              ],
-              "parameterObjects": "",
-              "useStrict": true,
-              "eventsSheetExpanded": false
             }
           ]
         },
@@ -24313,6 +24908,3555 @@
               },
               "parameters": [
                 "Savereussie",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Menu_32start",
+      "name": "Menu start",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.546875,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [
+        {
+          "name": "vie",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "vieMax",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "coins",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lastScene",
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 720,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "background",
+          "persistentUuid": "7a53327f-38e5-43fc-b9a3-dee96efc8f60",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": -10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 48,
+          "height": 106,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Quitter",
+          "persistentUuid": "7a9ee646-8bb2-4407-82bc-dd8bada823ab",
+          "width": 331,
+          "x": 485,
+          "y": 511,
+          "zOrder": -9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 48,
+          "height": 193,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Reprendre",
+          "persistentUuid": "03925c0e-de0e-409c-b69e-2cb9cda453ad",
+          "width": 465,
+          "x": 420,
+          "y": 79,
+          "zOrder": -8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 48,
+          "height": 106,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Newgame",
+          "persistentUuid": "87ea0cb3-27f0-4538-b495-dfeb138df853",
+          "width": 386,
+          "x": 457,
+          "y": 314,
+          "zOrder": -7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "background",
+          "texture": "pause.jpg",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "d7de738069817891a6c233618dc4fe00463738543c80009e9ef75684d5f6e8fd",
+          "name": "BrownButtonWithShadow",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 3,
+            "BottomPadding": 32,
+            "TopPadding": 32,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Brown Button With Shadow_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Brown Button With Shadow_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "BUTTON",
+              "font": "CantoraOne-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "BUTTON",
+                "font": "CantoraOne-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Brown Button With Shadow_Pressed.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "5f0df6131c9646dcbe98798196db5b6d806eb25564f86d2e119a084d1e20bf74",
+          "name": "BlackDecoratedButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 6,
+            "BottomPadding": 24,
+            "TopPadding": 20,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Black Decorated Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Black Decorated Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "ArchitectsDaughter.ttf",
+              "textAlignment": "center",
+              "characterSize": 22,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "ArchitectsDaughter.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 22,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Black Decorated Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 22,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "0d2644a425931f79026065835332ea795353d1f99fcd6ccd47ab7927bd0f35ed",
+          "name": "BlackSquareDecoratedButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 6,
+            "BottomPadding": 24,
+            "TopPadding": 24,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Black Square Decorated Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Black Square Decorated Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "mononoki-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 26,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "mononoki-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 26,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Black Square Decorated Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 22,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "90d94b6e3a23c34948e59eaaef4679740f8ab588696d59b21e0c0c2ef106b94d",
+          "name": "Newgame",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "New game",
+              "font": "Retro Gaming.ttf",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 99,
+                "g": 69,
+                "r": 28
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "New game",
+                "font": "Retro Gaming.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "28;69;99"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
+        },
+        {
+          "assetStoreId": "33302f0b615672a2e96316c096e13ad8d7242adba8bd5709538691894f0eae6e",
+          "name": "BlueButtonWithShadow",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 3,
+            "BottomPadding": 32,
+            "TopPadding": 32,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button With Shadow_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button With Shadow_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "BUTTON",
+              "font": "CantoraOne-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "BUTTON",
+                "font": "CantoraOne-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button With Shadow_Pressed.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "d00645a899e762e085fa6fdf2625701baea9cc10ee903a64ca7d371e5bbb8dca",
+          "name": "FloatingOutButtonDarkBlue",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 2,
+            "BottomPadding": 4,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Floating Out Button Dark Blue_Hovered.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Floating Out Button Dark Blue_Idle.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "CarterOne-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "CarterOne-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Floating Out Button Dark Blue_Pressed.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "569b45d3c7c34f7706563239938d04ca599016ff9857ee38c945c72330d4339e",
+          "name": "GreenButtonWithShadow",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 3,
+            "BottomPadding": 32,
+            "TopPadding": 32,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Green Button With Shadow_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Green Button With Shadow_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "BUTTON",
+              "font": "CantoraOne-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "BUTTON",
+                "font": "CantoraOne-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Green Button With Shadow_Pressed.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "9cf9ca8be6e98fc23e76b6770d3f4d094dea09f30a49f38ef9a9d2e97c2460be",
+          "name": "GreyButtonWithShadow",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 3,
+            "BottomPadding": 32,
+            "TopPadding": 32,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button With Shadow_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button With Shadow_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "BUTTON",
+              "font": "CantoraOne-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "BUTTON",
+                "font": "CantoraOne-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button With Shadow_Pressed.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "0364dbe0c9a504055bcfd65a3e898b58b0cb0aea76c15cc0b9961815b88ba4e6",
+          "name": "GreenButtonWithStoneFrame",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 2,
+            "BottomPadding": 0,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0.2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Green Button With Stone Frame_Hovered.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Green Button With Stone Frame_Idle.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Roboto-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Roboto-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Green Button With Stone Frame_Pressed.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            }
+          }
+        },
+        {
+          "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
+          "name": "Quitter",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Quitter ",
+              "font": "Retro Gaming.ttf",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 79,
+                "g": 72,
+                "r": 72
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Quitter ",
+                "font": "Retro Gaming.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "72;72;79"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
+        },
+        {
+          "assetStoreId": "b44dba91245ff1ac84a7b450e078194f19321d135fd8a67cd19bc9cb3403fba5",
+          "name": "Reprendre",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Green Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Green Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Charger la derniere sauvegarde",
+              "font": "Retro Gaming.ttf",
+              "textAlignment": "center",
+              "characterSize": 45,
+              "color": {
+                "b": 29,
+                "g": 99,
+                "r": 62
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Charger la derniere sauvegarde",
+                "font": "Retro Gaming.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 45,
+                "color": "62;99;29"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Green Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
+        },
+        {
+          "assetStoreId": "1cacfe2713f10642e8079542f28282d52f1bf46ae2dc27dc6c291a2970c90971",
+          "name": "MedievalButtonBeige",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 4,
+            "BottomPadding": 10,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0.2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 11,
+              "height": 64,
+              "leftMargin": 7,
+              "rightMargin": 7,
+              "texture": "Medieval Button Beige_Hovered.png",
+              "tiled": false,
+              "topMargin": 7,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 11,
+              "height": 64,
+              "leftMargin": 7,
+              "rightMargin": 7,
+              "texture": "Medieval Button Beige_Idle.png",
+              "tiled": false,
+              "topMargin": 7,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "CaesarDressing-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 64,
+                "g": 99,
+                "r": 133
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "CaesarDressing-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "133;99;64"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 7,
+              "height": 64,
+              "leftMargin": 7,
+              "rightMargin": 7,
+              "texture": "Medieval Button Beige_Pressed.png",
+              "tiled": false,
+              "topMargin": 11,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "26f7912e497fefccd32817a0c24533c9304633b47c6e556065dc498219877e81",
+          "name": "OnScreenControlsButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 1,
+            "BottomPadding": 0,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0.2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 6,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "On Screen Controls Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 6,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 6,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "On Screen Controls Button_Idle.png",
+              "tiled": false,
+              "topMargin": 6,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Roboto-Bold.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Roboto-Bold.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 6,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "On Screen Controls Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 6,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "82b8caa7b55342f43b24f169b4374e9224e1a78c05a87f8689663e7c4a6bad69",
+          "name": "MedievalButtonBrown",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 4,
+            "BottomPadding": 10,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0.2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 11,
+              "height": 64,
+              "leftMargin": 7,
+              "rightMargin": 7,
+              "texture": "Medieval Button Brown_Hovered.png",
+              "tiled": false,
+              "topMargin": 7,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 11,
+              "height": 64,
+              "leftMargin": 7,
+              "rightMargin": 7,
+              "texture": "Medieval Button Brown_Idle.png",
+              "tiled": false,
+              "topMargin": 7,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "CaveatBrush-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 159,
+                "g": 190,
+                "r": 219
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "CaveatBrush-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "219;190;159"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 7,
+              "height": 64,
+              "leftMargin": 7,
+              "rightMargin": 7,
+              "texture": "Medieval Button Brown_Pressed.png",
+              "tiled": false,
+              "topMargin": 11,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "72c8adcfb9187ebb5fcfbcd75bc18c74d6af5507e7c482cadcfad28f8011b387",
+          "name": "OrangeBubbleButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "BottomPadding": 0,
+            "TopPadding": 0,
+            "LeftPadding": 10,
+            "RightPadding": 10,
+            "PressedLabelOffsetY": 2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 35,
+              "height": 128,
+              "leftMargin": 56,
+              "rightMargin": 35,
+              "texture": "Orange Bubble Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 35,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 35,
+              "height": 128,
+              "leftMargin": 56,
+              "rightMargin": 35,
+              "texture": "Orange Bubble Button_Idle.png",
+              "tiled": false,
+              "topMargin": 35,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Poppins-Medium.ttf",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 0,
+                "g": 42,
+                "r": 117
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Poppins-Medium.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "117;42;0"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 35,
+              "height": 128,
+              "leftMargin": 35,
+              "rightMargin": 35,
+              "texture": "Orange Bubble Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 35,
+              "width": 256
+            }
+          }
+        },
+        {
+          "assetStoreId": "3699f3a9dbcacb430dfb90834c239c60a0324b631635c6658396cd524c7adb0a",
+          "name": "PurpleButtonWithStoneFrame",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 2,
+            "BottomPadding": 0,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0.2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Purple Button With Stone Frame_Hovered.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Purple Button With Stone Frame_Idle.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Roboto-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Roboto-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Purple Button With Stone Frame_Pressed.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            }
+          }
+        },
+        {
+          "assetStoreId": "a0b220a4d2b5cc644055848ff63b0f56c2685517bf870112832c9ab4b65aaa2f",
+          "name": "OrangeButtonWithStoneFrame",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 2,
+            "BottomPadding": 0,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0.2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Orange Button With Stone Frame_Hovered.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Orange Button With Stone Frame_Idle.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Roboto-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Roboto-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Orange Button With Stone Frame_Pressed.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            }
+          }
+        },
+        {
+          "assetStoreId": "a48315b9a9c655af87118d7bb8f6be03b4dbb14e066387849b2d2d4c3600573c",
+          "name": "PurpleButtonWithShadow",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 3,
+            "BottomPadding": 32,
+            "TopPadding": 32,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Purple Button With Shadow_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Purple Button With Shadow_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "BUTTON",
+              "font": "CantoraOne-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "BUTTON",
+                "font": "CantoraOne-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Purple Button With Shadow_Pressed.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "1d520e09dda1f2a1eae840a3133286acfff11151176c0eb2718d9f6a186d13c3",
+          "name": "RedButtonWithGoldFrame",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 2,
+            "BottomPadding": 0,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0.2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 64,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Red Button With Gold Frame_Hovered.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 288
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 64,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Red Button With Gold Frame_Idle.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 288
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Roboto-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Roboto-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 64,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Red Button With Gold Frame_Pressed.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 288
+            }
+          }
+        },
+        {
+          "assetStoreId": "e80b6352d9f27049db858db6a22ad1351febb242a738de07155a6ac8301ea5c5",
+          "name": "RedButtonWithMetalFrame",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 2,
+            "BottomPadding": 0,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0.2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 54,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Red Button With Metal Frame_Hovered.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 998
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 54,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Red Button With Metal Frame_Idle.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 998
+            },
+            "Label": {
+              "bold": true,
+              "italic": true,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Charm-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": true,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": true,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Charm-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 54,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Red Button With Metal Frame_Pressed.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 998
+            }
+          }
+        },
+        {
+          "assetStoreId": "5faf2b0415c271fa6e747283ed36297a95f04d2b6c477a7b011775fa6fb444ee",
+          "name": "RedButtonWithShadow",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 3,
+            "BottomPadding": 32,
+            "TopPadding": 32,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Red Button With Shadow_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Red Button With Shadow_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "BUTTON",
+              "font": "CantoraOne-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "BUTTON",
+                "font": "CantoraOne-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 69,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Red Button With Shadow_Pressed.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "b6e192c68f93de7846e94964878d4edf7b8071a1e295788658c044e70aff7543",
+          "name": "RedButtonWithStoneFrame",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 2,
+            "BottomPadding": 0,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0.2
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Red Button With Stone Frame_Hovered.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Red Button With Stone Frame_Idle.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Roboto-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 40,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Roboto-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 40,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 102,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Red Button With Stone Frame_Pressed.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 348
+            }
+          }
+        },
+        {
+          "assetStoreId": "0d3f4843e5ebb7af30fd80adf19a1c5a14164c1283f344991dc2aa14067a1262",
+          "name": "RedButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Red Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Red Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 16,
+                "g": 38,
+                "r": 111
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "111;38;16"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Red Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
+        },
+        {
+          "assetStoreId": "f0c3d7ae6099e3b9b8beed4e30b555107550b4fb2a5879e984a014b1e06865bf",
+          "name": "TransparentButtonWithWhiteBlueBorder",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 4,
+            "BottomPadding": 6,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Transparent Button With White Blue Border_Hovered.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Transparent Button With White Blue Border_Idle.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Kenney Mini Square.ttf",
+              "textAlignment": "center",
+              "characterSize": 45,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Kenney Mini Square.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 45,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Transparent Button With White Blue Border_Pressed.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "54a9a34bb495b15fe0e00f71075908e1ce52d499723617c966ad527229c77c79",
+          "name": "TransparentButtonWithWhiteYellowBorder",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 4,
+            "BottomPadding": 0,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Transparent Button With White Yellow Border_Hovered.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Transparent Button With White Yellow Border_Idle.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Charm-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 50,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Charm-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 50,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Transparent Button With White Yellow Border_Pressed.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "055eaaaceaa6fa09820aff95e0291764fbd98d84a9c2fb8cb3c4e059010a477b",
+          "name": "YellowJellyButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "BottomPadding": 16,
+            "TopPadding": 0,
+            "LeftPadding": 10,
+            "RightPadding": 10,
+            "PressedLabelOffsetY": 3
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 50,
+              "height": 128,
+              "leftMargin": 37,
+              "rightMargin": 32,
+              "texture": "Yellow Jelly Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 50,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 50,
+              "height": 128,
+              "leftMargin": 37,
+              "rightMargin": 32,
+              "texture": "Yellow Jelly Button_Idle.png",
+              "tiled": false,
+              "topMargin": 50,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "Rubik-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 0,
+                "g": 42,
+                "r": 117
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "Rubik-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "117;42;0"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 50,
+              "height": 128,
+              "leftMargin": 37,
+              "rightMargin": 32,
+              "texture": "Yellow Jelly Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 50,
+              "width": 256
+            }
+          }
+        },
+        {
+          "assetStoreId": "d907b5df38595e6d3f128058fbb3dbd0861f86505cc6d7bf9859ddcc3eceeb1f",
+          "name": "WhiteDecoratedButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 6,
+            "BottomPadding": 24,
+            "TopPadding": 20,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "White Decorated Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "White Decorated Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "ArchitectsDaughter.ttf",
+              "textAlignment": "center",
+              "characterSize": 16,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "ArchitectsDaughter.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 16,
+                "color": "0;0;0"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "White Decorated Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 22,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "02cb22c03a7c7f9262819832f0fea819fc5021f2b7a8854eb99d6ff20f180d66",
+          "name": "WhiteSleekButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "BottomPadding": 31,
+            "TopPadding": 5,
+            "LeftPadding": 12,
+            "RightPadding": 12,
+            "PressedLabelOffsetY": 6
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 55,
+              "height": 128,
+              "leftMargin": 40,
+              "rightMargin": 40,
+              "texture": "White Sleek Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 37,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 55,
+              "height": 128,
+              "leftMargin": 40,
+              "rightMargin": 40,
+              "texture": "White Sleek Button_Idle.png",
+              "tiled": false,
+              "topMargin": 37,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "WorkSans-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 95,
+                "g": 23,
+                "r": 6
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "WorkSans-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "6;23;95"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 55,
+              "height": 128,
+              "leftMargin": 40,
+              "rightMargin": 40,
+              "texture": "White Sleek Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 37,
+              "width": 256
+            }
+          }
+        },
+        {
+          "assetStoreId": "f23eb31ad33dd63f1937c8745105316ca530c28513c64b68a665975503c852a6",
+          "name": "WhiteSquareDecoratedButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 6,
+            "BottomPadding": 24,
+            "TopPadding": 20,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "White Square Decorated Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 22,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "White Square Decorated Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "mononoki-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 20,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "mononoki-Regular.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 20,
+                "color": "0;0;0"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 64,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "White Square Decorated Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 22,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "615de0316452630b9f4f6a39decc82e2449b82c1afd1ff24d6470dad2922177b",
+          "name": "YellowButton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Yellow Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Yellow Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Button",
+              "font": "",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 42,
+                "g": 87,
+                "r": 139
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Button",
+                "font": "",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "139;87;42"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Yellow Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
+        },
+        {
+          "assetStoreId": "9d5de415b6e469c681701ea42d3b1c486fee31d6ef591a2d3e226f639ab486ff",
+          "name": "Quitterchoix",
+          "type": "TwoChoicesDialogBoxes::TwoChoicesDialogBox",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LabelButtonID0": "Oui",
+            "LabelButtonID1": "Non",
+            "EnableEscape": true,
+            "TextMessage": "Etes-vous sur de vouloir quitter? Cela effacera toute progression non sauvegardée."
+          },
+          "childrenContent": {
+            "Dialogue": {
+              "content": {
+                "text": "Etes-vous sur de vouloir quitter? Cela \nreinitialisera votre progression.",
+                "opacity": 255,
+                "scale": 2,
+                "fontSize": 20,
+                "tint": "255;255;255",
+                "bitmapFontResourceName": "8BitOperatorPlus8Regular_Edited.fnt",
+                "textureAtlasResourceName": "8BitOperatorPlus8Regular_Edited.png",
+                "align": "left",
+                "wordWrap": true
+              }
+            },
+            "NoButton": {
+              "content": {
+                "LeftPadding": 8,
+                "RightPadding": 8,
+                "PressedLabelOffsetY": 0,
+                "IdleLabelOffsetY": -8,
+                "BottomPadding": 8,
+                "TopPadding": 8,
+                "MinimalWidth": 300
+              },
+              "childrenContent": {
+                "Hovered": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Idle": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Label": {
+                  "bold": false,
+                  "italic": false,
+                  "smoothed": true,
+                  "underlined": false,
+                  "string": "No",
+                  "font": "",
+                  "textAlignment": "center",
+                  "characterSize": 26,
+                  "color": {
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                  },
+                  "content": {
+                    "bold": false,
+                    "isOutlineEnabled": false,
+                    "isShadowEnabled": false,
+                    "italic": false,
+                    "outlineColor": "255;255;255",
+                    "outlineThickness": 2,
+                    "shadowAngle": 90,
+                    "shadowBlurRadius": 2,
+                    "shadowColor": "0;0;0",
+                    "shadowDistance": 4,
+                    "shadowOpacity": 127,
+                    "smoothed": true,
+                    "underlined": false,
+                    "text": "No",
+                    "font": "",
+                    "textAlignment": "center",
+                    "verticalTextAlignment": "top",
+                    "characterSize": 26,
+                    "color": "255;255;255"
+                  }
+                },
+                "Pressed": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                }
+              }
+            },
+            "TextBorder": {
+              "bottomMargin": 16,
+              "height": 48,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Border.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 48
+            },
+            "YesButton": {
+              "content": {
+                "LeftPadding": 8,
+                "RightPadding": 8,
+                "PressedLabelOffsetY": 0,
+                "IdleLabelOffsetY": -8,
+                "BottomPadding": 8,
+                "TopPadding": 8,
+                "MinimalWidth": 300
+              },
+              "childrenContent": {
+                "Hovered": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Idle": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Label": {
+                  "bold": false,
+                  "italic": false,
+                  "smoothed": true,
+                  "underlined": false,
+                  "string": "Yes",
+                  "font": "",
+                  "textAlignment": "center",
+                  "characterSize": 26,
+                  "color": {
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                  },
+                  "content": {
+                    "bold": false,
+                    "isOutlineEnabled": false,
+                    "isShadowEnabled": false,
+                    "italic": false,
+                    "outlineColor": "255;255;255",
+                    "outlineThickness": 2,
+                    "shadowAngle": 90,
+                    "shadowBlurRadius": 2,
+                    "shadowColor": "0;0;0",
+                    "shadowDistance": 4,
+                    "shadowOpacity": 127,
+                    "smoothed": true,
+                    "underlined": false,
+                    "text": "Yes",
+                    "font": "",
+                    "textAlignment": "center",
+                    "verticalTextAlignment": "top",
+                    "characterSize": 26,
+                    "color": "255;255;255"
+                  }
+                },
+                "Pressed": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                }
+              }
+            }
+          }
+        },
+        {
+          "assetStoreId": "9d5de415b6e469c681701ea42d3b1c486fee31d6ef591a2d3e226f639ab486ff",
+          "name": "erreursave",
+          "type": "TwoChoicesDialogBoxes::TwoChoicesDialogBox",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LabelButtonID0": "Ok",
+            "LabelButtonID1": "Quitter",
+            "EnableEscape": true,
+            "TextMessage": "Vous n'avez pas de sauvegarde ou elle est corrompue!"
+          },
+          "childrenContent": {
+            "Dialogue": {
+              "content": {
+                "text": "Vous n'avez pas de sauvegarde ou elle est corrompue!",
+                "opacity": 255,
+                "scale": 2,
+                "fontSize": 20,
+                "tint": "255;255;255",
+                "bitmapFontResourceName": "8BitOperatorPlus8Regular_Edited.fnt",
+                "textureAtlasResourceName": "8BitOperatorPlus8Regular_Edited.png",
+                "align": "left",
+                "wordWrap": true
+              }
+            },
+            "NoButton": {
+              "content": {
+                "LeftPadding": 8,
+                "RightPadding": 8,
+                "PressedLabelOffsetY": 0,
+                "IdleLabelOffsetY": -8,
+                "BottomPadding": 8,
+                "TopPadding": 8,
+                "MinimalWidth": 300
+              },
+              "childrenContent": {
+                "Hovered": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Idle": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Label": {
+                  "bold": false,
+                  "italic": false,
+                  "smoothed": true,
+                  "underlined": false,
+                  "string": "No",
+                  "font": "",
+                  "textAlignment": "center",
+                  "characterSize": 26,
+                  "color": {
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                  },
+                  "content": {
+                    "bold": false,
+                    "isOutlineEnabled": false,
+                    "isShadowEnabled": false,
+                    "italic": false,
+                    "outlineColor": "255;255;255",
+                    "outlineThickness": 2,
+                    "shadowAngle": 90,
+                    "shadowBlurRadius": 2,
+                    "shadowColor": "0;0;0",
+                    "shadowDistance": 4,
+                    "shadowOpacity": 127,
+                    "smoothed": true,
+                    "underlined": false,
+                    "text": "No",
+                    "font": "",
+                    "textAlignment": "center",
+                    "verticalTextAlignment": "top",
+                    "characterSize": 26,
+                    "color": "255;255;255"
+                  }
+                },
+                "Pressed": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                }
+              }
+            },
+            "TextBorder": {
+              "bottomMargin": 16,
+              "height": 48,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Border.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 48
+            },
+            "YesButton": {
+              "content": {
+                "LeftPadding": 8,
+                "RightPadding": 8,
+                "PressedLabelOffsetY": 0,
+                "IdleLabelOffsetY": -8,
+                "BottomPadding": 8,
+                "TopPadding": 8,
+                "MinimalWidth": 300
+              },
+              "childrenContent": {
+                "Hovered": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Idle": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Label": {
+                  "bold": false,
+                  "italic": false,
+                  "smoothed": true,
+                  "underlined": false,
+                  "string": "Yes",
+                  "font": "",
+                  "textAlignment": "center",
+                  "characterSize": 26,
+                  "color": {
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                  },
+                  "content": {
+                    "bold": false,
+                    "isOutlineEnabled": false,
+                    "isShadowEnabled": false,
+                    "italic": false,
+                    "outlineColor": "255;255;255",
+                    "outlineThickness": 2,
+                    "shadowAngle": 90,
+                    "shadowBlurRadius": 2,
+                    "shadowColor": "0;0;0",
+                    "shadowDistance": 4,
+                    "shadowOpacity": 127,
+                    "smoothed": true,
+                    "underlined": false,
+                    "text": "Yes",
+                    "font": "",
+                    "textAlignment": "center",
+                    "verticalTextAlignment": "top",
+                    "characterSize": 26,
+                    "color": "255;255;255"
+                  }
+                },
+                "Pressed": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                }
+              }
+            }
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "folderName": "Bouton inutiles",
+            "children": [
+              {
+                "objectName": "YellowButton"
+              },
+              {
+                "objectName": "WhiteSleekButton"
+              },
+              {
+                "objectName": "WhiteSquareDecoratedButton"
+              },
+              {
+                "objectName": "WhiteDecoratedButton"
+              },
+              {
+                "objectName": "TransparentButtonWithWhiteYellowBorder"
+              },
+              {
+                "objectName": "YellowJellyButton"
+              },
+              {
+                "objectName": "RedButton"
+              },
+              {
+                "objectName": "TransparentButtonWithWhiteBlueBorder"
+              },
+              {
+                "objectName": "RedButtonWithStoneFrame"
+              },
+              {
+                "objectName": "RedButtonWithShadow"
+              },
+              {
+                "objectName": "RedButtonWithMetalFrame"
+              },
+              {
+                "objectName": "RedButtonWithGoldFrame"
+              },
+              {
+                "objectName": "PurpleButtonWithShadow"
+              },
+              {
+                "objectName": "OrangeButtonWithStoneFrame"
+              },
+              {
+                "objectName": "PurpleButtonWithStoneFrame"
+              },
+              {
+                "objectName": "OrangeBubbleButton"
+              },
+              {
+                "objectName": "MedievalButtonBrown"
+              },
+              {
+                "objectName": "OnScreenControlsButton"
+              },
+              {
+                "objectName": "MedievalButtonBeige"
+              },
+              {
+                "objectName": "GreenButtonWithStoneFrame"
+              },
+              {
+                "objectName": "GreyButtonWithShadow"
+              },
+              {
+                "objectName": "GreenButtonWithShadow"
+              },
+              {
+                "objectName": "FloatingOutButtonDarkBlue"
+              },
+              {
+                "objectName": "BlueButtonWithShadow"
+              },
+              {
+                "objectName": "BlackSquareDecoratedButton"
+              },
+              {
+                "objectName": "BlackDecoratedButton"
+              },
+              {
+                "objectName": "BrownButtonWithShadow"
+              }
+            ]
+          },
+          {
+            "objectName": "background"
+          },
+          {
+            "objectName": "Newgame"
+          },
+          {
+            "objectName": "Quitter"
+          },
+          {
+            "objectName": "Reprendre"
+          },
+          {
+            "objectName": "Quitterchoix"
+          },
+          {
+            "objectName": "erreursave"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MontreSouris"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "Quitter",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Quitterchoix",
+                "356",
+                "253",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsYesClicked"
+              },
+              "parameters": [
+                "Quitterchoix",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Quit"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsNoClicked"
+              },
+              "parameters": [
+                "Quitterchoix",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Quitterchoix",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "Newgame",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Lobby\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "Reprendre",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::PathExists"
+              },
+              "parameters": [
+                "\"save.json\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::PathExists"
+              },
+              "parameters": [
+                "\"save.dat\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FileSystem::DeleteFile"
+              },
+              "parameters": [
+                "\"save.json\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FileSystem::SaveStringToFileSync"
+              },
+              "parameters": [
+                "\"yes\"",
+                "\"save.json\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Chargement\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "Reprendre",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "FileSystem::PathExists"
+              },
+              "parameters": [
+                "\"save.json\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "erreursave",
+                "356",
+                "253",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "Reprendre",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "FileSystem::PathExists"
+              },
+              "parameters": [
+                "\"save.dat\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "erreursave",
+                "356",
+                "253",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsNoClicked"
+              },
+              "parameters": [
+                "erreursave",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Quitterchoix",
+                "356",
+                "253",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "erreursave",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TwoChoicesDialogBoxes::TwoChoicesDialogBox::IsYesClicked"
+              },
+              "parameters": [
+                "erreursave",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "erreursave",
                 ""
               ]
             }
@@ -24385,6 +28529,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     }
@@ -55594,78 +59742,6 @@
           "sharedPropertyDescriptors": []
         }
       ],
-      "eventsBasedObjects": []
-    },
-    {
-      "author": "TatouDM",
-      "category": "",
-      "extensionNamespace": "",
-      "fullName": "",
-      "helpPath": "",
-      "iconUrl": "",
-      "name": "LocalFileSave",
-      "previewIconUrl": "",
-      "shortDescription": "",
-      "version": "1.0.0",
-      "description": "Save game data to local files",
-      "tags": [],
-      "authorIds": [],
-      "dependencies": [
-        {
-          "exportName": "",
-          "name": "electron",
-          "type": "npm",
-          "version": ""
-        },
-        {
-          "exportName": "",
-          "name": "fs",
-          "type": "npm",
-          "version": ""
-        }
-      ],
-      "globalVariables": [],
-      "sceneVariables": [],
-      "eventsFunctions": [
-        {
-          "description": "Save game data to a local file",
-          "fullName": "Save data to a local file",
-          "functionType": "Action",
-          "name": "saveToFile",
-          "sentence": "",
-          "events": [],
-          "parameters": [
-            {
-              "description": "Data to save",
-              "name": "data",
-              "type": "string"
-            },
-            {
-              "description": "Name of the file",
-              "name": "filename",
-              "type": "string"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "description": "Load game data from a local file",
-          "fullName": "Load data from a local file",
-          "functionType": "Action",
-          "name": "loadFromFile",
-          "sentence": "",
-          "events": [],
-          "parameters": [
-            {
-              "description": "Name of the file to load",
-              "name": "filename",
-              "type": "string"
-            }
-          ],
-          "objectGroups": []
-        }
-      ],
-      "eventsBasedBehaviors": [],
       "eventsBasedObjects": []
     }
   ],
