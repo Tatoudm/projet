@@ -3664,6 +3664,14 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Lucid Icons Pack/Flat/f45f4976c0ee3316ce88723e4eb8a5591d4f85f849653486164562ca8d4159dc_Pause.png",
           "name": "Pause.png"
         }
+      },
+      {
+        "file": "assets/HitBoxDoor.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "HitBoxDoor",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -4536,7 +4544,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6040838749988914,
+        "zoomFactor": 0.5843784410740974,
         "windowMask": false
       },
       "objectsGroups": [
@@ -4731,22 +4739,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Hitbox",
-          "persistentUuid": "759cbc1e-4d29-48a7-917f-1e17709e4961",
-          "width": 0,
-          "x": 785,
-          "y": 348,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 46,
@@ -4865,14 +4857,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 48,
-          "height": 16,
+          "height": 41,
           "keepRatio": true,
           "layer": "",
           "name": "PixelHeartBar",
           "persistentUuid": "fbecc049-d994-46f7-b1bb-dfa64569e4cb",
-          "width": 79,
-          "x": 42,
-          "y": 48,
+          "width": 82,
+          "x": 29,
+          "y": 41,
           "zOrder": 26,
           "numberProperties": [],
           "stringProperties": [],
@@ -4921,7 +4913,7 @@
           "persistentUuid": "6003248e-d025-4232-a0ec-233c6abad368",
           "width": 65,
           "x": 14,
-          "y": 67,
+          "y": 79,
           "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
@@ -4936,8 +4928,8 @@
           "name": "cointext",
           "persistentUuid": "bb76991a-0210-4b02-b0f2-bc9d644f4f8b",
           "width": 0,
-          "x": 36,
-          "y": 73,
+          "x": 33,
+          "y": 84,
           "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
@@ -4972,6 +4964,106 @@
           "x": 192,
           "y": 351,
           "zOrder": 32,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform2",
+          "persistentUuid": "d64b3e9b-d4ba-426b-9a82-4fc660924615",
+          "width": 0,
+          "x": 664,
+          "y": 339,
+          "zOrder": 33,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Hitbox",
+          "persistentUuid": "a37ff0b0-a7b9-4e42-b578-d87b03c380fa",
+          "width": 256,
+          "x": 671,
+          "y": 350,
+          "zOrder": 34,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Hitbox",
+          "persistentUuid": "f7c0422e-5c2a-46dc-93bd-0503e56dbd5f",
+          "width": 86,
+          "x": 758,
+          "y": 382,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform1",
+          "persistentUuid": "8b1a68db-a8fb-421f-bb01-30dc446ffcbe",
+          "width": 0,
+          "x": 948,
+          "y": 258,
+          "zOrder": 36,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 204,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Door",
+          "persistentUuid": "6e62bf37-cf46-4e23-ab71-2770386bb105",
+          "width": 201,
+          "x": 1010,
+          "y": 69,
+          "zOrder": 37,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 160,
+          "keepRatio": true,
+          "layer": "",
+          "name": "HitBoxDoor",
+          "persistentUuid": "c3fd049a-db19-4ed8-8709-9524884be136",
+          "width": 108,
+          "x": 1100,
+          "y": 112,
+          "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -12193,7 +12285,7 @@
               "leftMargin": 0,
               "rightMargin": 0,
               "texture": "tiled_Tiled Empty UI Heart.png",
-              "tiled": true,
+              "tiled": false,
               "topMargin": 0,
               "width": 48
             },
@@ -12455,11 +12547,56 @@
             "characterSize": 20,
             "color": "0;0;0"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "HitBoxDoor",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "HitBoxDoor",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "HitBoxDoor",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
+          {
+            "folderName": "NewFolder"
+          },
           {
             "objectName": "Hitbox"
           },
@@ -12539,6 +12676,9 @@
           },
           {
             "objectName": "test"
+          },
+          {
+            "objectName": "HitBoxDoor"
           }
         ]
       },
@@ -28535,6 +28675,73 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Level1",
+      "name": "Level1",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {},
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [],
+      "objects": [],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT"
+      },
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": []
     }
   ],
   "externalEvents": [],
