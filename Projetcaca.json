@@ -3706,6 +3706,11 @@
       "name": "lastSceneg",
       "type": "string",
       "value": "Scene Logo"
+    },
+    {
+      "name": "coinramasseg",
+      "type": "structure",
+      "children": []
     }
   ],
   "layouts": [
@@ -4585,6 +4590,11 @@
           "name": "invincible",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "IDscene",
+          "type": "number",
+          "value": 1
         }
       ],
       "instances": [
@@ -4819,7 +4829,13 @@
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "ID",
+              "type": "number",
+              "value": 11
+            }
+          ]
         },
         {
           "angle": 0,
@@ -4835,7 +4851,13 @@
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "ID",
+              "type": "number",
+              "value": 12
+            }
+          ]
         },
         {
           "angle": 0,
@@ -5065,6 +5087,39 @@
           "x": 958,
           "y": 270,
           "zOrder": 39,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform1",
+          "persistentUuid": "dd115524-9b32-410d-8e07-27e4ab78e9bf",
+          "width": 0,
+          "x": -468,
+          "y": 79,
+          "zOrder": 40,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Hitbox",
+          "persistentUuid": "834f27c0-bcaf-4ccb-affa-7140ad01ea74",
+          "width": 257,
+          "x": -457,
+          "y": 90,
+          "zOrder": 41,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -12548,11 +12603,232 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "9d5de415b6e469c681701ea42d3b1c486fee31d6ef591a2d3e226f639ab486ff",
+          "name": "TwoChoicesDialogBox",
+          "type": "TwoChoicesDialogBoxes::TwoChoicesDialogBox",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {},
+          "childrenContent": {
+            "Dialogue": {
+              "content": {
+                "text": "Default message. Continue?",
+                "opacity": 255,
+                "scale": 2,
+                "fontSize": 20,
+                "tint": "255;255;255",
+                "bitmapFontResourceName": "8BitOperatorPlus8Regular_Edited.fnt",
+                "textureAtlasResourceName": "8BitOperatorPlus8Regular_Edited.png",
+                "align": "left",
+                "wordWrap": true
+              }
+            },
+            "NoButton": {
+              "content": {
+                "LeftPadding": 8,
+                "RightPadding": 8,
+                "PressedLabelOffsetY": 0,
+                "IdleLabelOffsetY": -8,
+                "BottomPadding": 8,
+                "TopPadding": 8,
+                "MinimalWidth": 300
+              },
+              "childrenContent": {
+                "Hovered": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Idle": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Label": {
+                  "bold": false,
+                  "italic": false,
+                  "smoothed": true,
+                  "underlined": false,
+                  "string": "No",
+                  "font": "",
+                  "textAlignment": "center",
+                  "characterSize": 26,
+                  "color": {
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                  },
+                  "content": {
+                    "bold": false,
+                    "isOutlineEnabled": false,
+                    "isShadowEnabled": false,
+                    "italic": false,
+                    "outlineColor": "255;255;255",
+                    "outlineThickness": 2,
+                    "shadowAngle": 90,
+                    "shadowBlurRadius": 2,
+                    "shadowColor": "0;0;0",
+                    "shadowDistance": 4,
+                    "shadowOpacity": 127,
+                    "smoothed": true,
+                    "underlined": false,
+                    "text": "No",
+                    "font": "",
+                    "textAlignment": "center",
+                    "verticalTextAlignment": "top",
+                    "characterSize": 26,
+                    "color": "255;255;255"
+                  }
+                },
+                "Pressed": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                }
+              }
+            },
+            "TextBorder": {
+              "bottomMargin": 16,
+              "height": 48,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Border.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 48
+            },
+            "YesButton": {
+              "content": {
+                "LeftPadding": 8,
+                "RightPadding": 8,
+                "PressedLabelOffsetY": 0,
+                "IdleLabelOffsetY": -8,
+                "BottomPadding": 8,
+                "TopPadding": 8,
+                "MinimalWidth": 300
+              },
+              "childrenContent": {
+                "Hovered": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Idle": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                },
+                "Label": {
+                  "bold": false,
+                  "italic": false,
+                  "smoothed": true,
+                  "underlined": false,
+                  "string": "Yes",
+                  "font": "",
+                  "textAlignment": "center",
+                  "characterSize": 26,
+                  "color": {
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                  },
+                  "content": {
+                    "bold": false,
+                    "isOutlineEnabled": false,
+                    "isShadowEnabled": false,
+                    "italic": false,
+                    "outlineColor": "255;255;255",
+                    "outlineThickness": 2,
+                    "shadowAngle": 90,
+                    "shadowBlurRadius": 2,
+                    "shadowColor": "0;0;0",
+                    "shadowDistance": 4,
+                    "shadowOpacity": 127,
+                    "smoothed": true,
+                    "underlined": false,
+                    "text": "Yes",
+                    "font": "",
+                    "textAlignment": "center",
+                    "verticalTextAlignment": "top",
+                    "characterSize": 26,
+                    "color": "255;255;255"
+                  }
+                },
+                "Pressed": {
+                  "bottomMargin": 8,
+                  "height": 106,
+                  "leftMargin": 8,
+                  "rightMargin": 8,
+                  "texture": "Border2.png",
+                  "tiled": false,
+                  "topMargin": 8,
+                  "width": 256
+                }
+              }
+            }
+          }
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
+          {
+            "folderName": "Plateforme, ou en rapport",
+            "children": [
+              {
+                "objectName": "Door"
+              },
+              {
+                "objectName": "Coin"
+              },
+              {
+                "objectName": "Ladder"
+              },
+              {
+                "objectName": "Platform1"
+              },
+              {
+                "objectName": "Platform3"
+              },
+              {
+                "objectName": "Platform2"
+              },
+              {
+                "objectName": "CornerPlatform"
+              },
+              {
+                "objectName": "TwoChoicesDialogBox"
+              }
+            ]
+          },
           {
             "folderName": "HitBox (ou truc dans le genre)",
             "children": [
@@ -12570,6 +12846,9 @@
           {
             "folderName": "Decor",
             "children": [
+              {
+                "objectName": "Pic"
+              },
               {
                 "objectName": "PixelHeartBar"
               },
@@ -12617,31 +12896,7 @@
             "objectName": "Player"
           },
           {
-            "objectName": "CornerPlatform"
-          },
-          {
-            "objectName": "Door"
-          },
-          {
-            "objectName": "Coin"
-          },
-          {
-            "objectName": "Platform2"
-          },
-          {
-            "objectName": "Platform1"
-          },
-          {
-            "objectName": "Ladder"
-          },
-          {
-            "objectName": "Platform3"
-          },
-          {
             "objectName": "RedHero"
-          },
-          {
-            "objectName": "Pic"
           }
         ]
       },
@@ -12960,6 +13215,15 @@
                 "Animation",
                 "=",
                 "\"Jump\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::SetCanJump"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
               ]
             }
           ]
