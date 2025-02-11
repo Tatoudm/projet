@@ -4958,22 +4958,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "test",
-          "persistentUuid": "40988270-d441-4aeb-9f57-2075b44f496a",
-          "width": 0,
-          "x": 192,
-          "y": 351,
-          "zOrder": 32,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
           "name": "Platform2",
           "persistentUuid": "d64b3e9b-d4ba-426b-9a82-4fc660924615",
           "width": 0,
@@ -5064,6 +5048,23 @@
           "x": 1100,
           "y": 112,
           "zOrder": 38,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Hitbox",
+          "persistentUuid": "1d04a0a3-17d4-4a66-b656-344b27143ab6",
+          "width": 258,
+          "x": 958,
+          "y": 270,
+          "zOrder": 39,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -12507,48 +12508,6 @@
           ]
         },
         {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "test",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 20,
-            "color": "0;0;0"
-          }
-        },
-        {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "HitBoxDoor",
@@ -12595,10 +12554,53 @@
         "folderName": "__ROOT",
         "children": [
           {
-            "folderName": "NewFolder"
+            "folderName": "HitBox (ou truc dans le genre)",
+            "children": [
+              {
+                "objectName": "SpawnPoint"
+              },
+              {
+                "objectName": "HitBoxDoor"
+              },
+              {
+                "objectName": "Hitbox"
+              }
+            ]
           },
           {
-            "objectName": "Hitbox"
+            "folderName": "Decor",
+            "children": [
+              {
+                "objectName": "PixelHeartBar"
+              },
+              {
+                "objectName": "cointext"
+              },
+              {
+                "objectName": "argent"
+              },
+              {
+                "objectName": "Pause"
+              },
+              {
+                "objectName": "Background"
+              },
+              {
+                "objectName": "Clouds"
+              },
+              {
+                "objectName": "Moon"
+              },
+              {
+                "objectName": "Fly"
+              },
+              {
+                "objectName": "Monster"
+              },
+              {
+                "objectName": "Checkpoint"
+              }
+            ]
           },
           {
             "folderName": "Mobile Controls",
@@ -12612,25 +12614,7 @@
             ]
           },
           {
-            "objectName": "SpawnPoint"
-          },
-          {
-            "objectName": "Checkpoint"
-          },
-          {
-            "objectName": "Monster"
-          },
-          {
-            "objectName": "Fly"
-          },
-          {
             "objectName": "Player"
-          },
-          {
-            "objectName": "Moon"
-          },
-          {
-            "objectName": "Clouds"
           },
           {
             "objectName": "CornerPlatform"
@@ -12657,28 +12641,7 @@
             "objectName": "RedHero"
           },
           {
-            "objectName": "Background"
-          },
-          {
-            "objectName": "Pause"
-          },
-          {
             "objectName": "Pic"
-          },
-          {
-            "objectName": "PixelHeartBar"
-          },
-          {
-            "objectName": "argent"
-          },
-          {
-            "objectName": "cointext"
-          },
-          {
-            "objectName": "test"
-          },
-          {
-            "objectName": "HitBoxDoor"
           }
         ]
       },
@@ -13224,6 +13187,24 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "HitBoxDoor",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": []
         }
       ],
       "layers": [
