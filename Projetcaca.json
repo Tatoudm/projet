@@ -4592,9 +4592,9 @@
           "value": 0
         },
         {
-          "name": "IDscene",
-          "type": "number",
-          "value": 1
+          "name": "_temp_IDcoin",
+          "type": "string",
+          "value": "0"
         }
       ],
       "instances": [
@@ -4851,13 +4851,7 @@
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "ID",
-              "type": "number",
-              "value": 12
-            }
-          ]
+          "initialVariables": []
         },
         {
           "angle": 0,
@@ -5120,6 +5114,22 @@
           "x": -457,
           "y": 90,
           "zOrder": 41,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "test",
+          "persistentUuid": "3bac8c21-b43d-43de-aeeb-91af3a3fabd9",
+          "width": 0,
+          "x": 259,
+          "y": 44,
+          "zOrder": 42,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -12795,6 +12805,48 @@
               }
             }
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "test",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 255,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Text",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -12808,6 +12860,9 @@
               },
               {
                 "objectName": "Coin"
+              },
+              {
+                "objectName": "test"
               },
               {
                 "objectName": "Ladder"
@@ -13023,6 +13078,25 @@
                 "coinsg",
                 "+",
                 "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "_temp_IDcoin",
+                "=",
+                "ToString(Coin.BoundingBoxTop()) + \"_\" + ToString(Coin.BoundingBoxLeft())"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushVariable"
+              },
+              "parameters": [
+                "coinramasseg",
+                "_temp_IDcoin"
               ]
             }
           ]
