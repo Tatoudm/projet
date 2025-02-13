@@ -3710,7 +3710,17 @@
     {
       "name": "coinramasseg",
       "type": "structure",
+<<<<<<< HEAD
       "children": []
+=======
+      "children": [
+        {
+          "name": "Lobby",
+          "type": "array",
+          "children": []
+        }
+      ]
+>>>>>>> b033d303d54751a2d7decfb35a3d5a821371e6cf
     }
   ],
   "layouts": [
@@ -13022,7 +13032,11 @@
               "parameters": [
                 "_temp_Ycoin",
                 "=",
+<<<<<<< HEAD
                 "ToNumber(SubStr(ToString(coinramasseg.Lobby[nomchild]), 0, 3))\n"
+=======
+                "ToNumber(SubStr(ToString(coinramasseg.Lobby), 0, 3))"
+>>>>>>> b033d303d54751a2d7decfb35a3d5a821371e6cf
               ]
             },
             {
@@ -13032,7 +13046,11 @@
               "parameters": [
                 "_temp_Xcoin",
                 "=",
+<<<<<<< HEAD
                 "ToNumber(SubStr(ToString(coinramasseg.Lobby[nomchild]), StrLength(ToString(coinramasseg.Lobby[nomchild])) - 3, 3))\n"
+=======
+                "ToNumber(SubStr(ToString(coinramasseg.Lobby), StrLength(ToString(coinramasseg.Lobby)) - 3, 3))\n"
+>>>>>>> b033d303d54751a2d7decfb35a3d5a821371e6cf
               ]
             }
           ],
