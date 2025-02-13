@@ -3710,7 +3710,13 @@
     {
       "name": "coinramasseg",
       "type": "structure",
-      "children": []
+      "children": [
+        {
+          "name": "Lobby",
+          "type": "array",
+          "children": []
+        }
+      ]
     }
   ],
   "layouts": [
@@ -13022,7 +13028,7 @@
               "parameters": [
                 "_temp_Ycoin",
                 "=",
-                "ToNumber(SubStr(ToString(coinramasseg.Lobby[nomchild]), 0, 3))\n"
+                "ToNumber(SubStr(ToString(coinramasseg.Lobby), 0, 3))"
               ]
             },
             {
@@ -13032,7 +13038,7 @@
               "parameters": [
                 "_temp_Xcoin",
                 "=",
-                "ToNumber(SubStr(ToString(coinramasseg.Lobby[nomchild]), StrLength(ToString(coinramasseg.Lobby[nomchild])) - 3, 3))\n"
+                "ToNumber(SubStr(ToString(coinramasseg.Lobby), StrLength(ToString(coinramasseg.Lobby)) - 3, 3))\n"
               ]
             }
           ],
