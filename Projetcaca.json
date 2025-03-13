@@ -3710,17 +3710,13 @@
     {
       "name": "coinramasseg",
       "type": "structure",
-<<<<<<< HEAD
-      "children": []
-=======
       "children": [
         {
           "name": "Lobby",
-          "type": "array",
-          "children": []
+          "type": "number",
+          "value": 0
         }
       ]
->>>>>>> b033d303d54751a2d7decfb35a3d5a821371e6cf
     }
   ],
   "layouts": [
@@ -4123,11 +4119,6 @@
           "name": "lastScene",
           "type": "string",
           "value": ""
-        },
-        {
-          "name": "coinramasse",
-          "type": "structure",
-          "children": []
         }
       ],
       "instances": [
@@ -4416,17 +4407,6 @@
             },
             {
               "type": {
-                "value": "FileSystem::LoadVariableFromJSONFileSync"
-              },
-              "parameters": [
-                "coinramasse",
-                "\"save4.json\"",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "SetNumberVariable"
               },
               "parameters": [
@@ -4463,15 +4443,6 @@
                 "lastSceneg",
                 "=",
                 "lastScene"
-              ]
-            },
-            {
-              "type": {
-                "value": "PushVariable"
-              },
-              "parameters": [
-                "coinramasseg",
-                "coinramasse"
               ]
             },
             {
@@ -5174,6 +5145,22 @@
           "x": -457,
           "y": 90,
           "zOrder": 41,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "test",
+          "persistentUuid": "3bac8c21-b43d-43de-aeeb-91af3a3fabd9",
+          "width": 0,
+          "x": 259,
+          "y": 44,
+          "zOrder": 42,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -12849,6 +12836,48 @@
               }
             }
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "test",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 255,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Text",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -12862,6 +12891,9 @@
               },
               {
                 "objectName": "Coin"
+              },
+              {
+                "objectName": "test"
               },
               {
                 "objectName": "Ladder"
@@ -13032,11 +13064,7 @@
               "parameters": [
                 "_temp_Ycoin",
                 "=",
-<<<<<<< HEAD
                 "ToNumber(SubStr(ToString(coinramasseg.Lobby[nomchild]), 0, 3))\n"
-=======
-                "ToNumber(SubStr(ToString(coinramasseg.Lobby), 0, 3))"
->>>>>>> b033d303d54751a2d7decfb35a3d5a821371e6cf
               ]
             },
             {
@@ -13046,49 +13074,43 @@
               "parameters": [
                 "_temp_Xcoin",
                 "=",
-<<<<<<< HEAD
                 "ToNumber(SubStr(ToString(coinramasseg.Lobby[nomchild]), StrLength(ToString(coinramasseg.Lobby[nomchild])) - 3, 3))\n"
-=======
-                "ToNumber(SubStr(ToString(coinramasseg.Lobby), StrLength(ToString(coinramasseg.Lobby)) - 3, 3))\n"
->>>>>>> b033d303d54751a2d7decfb35a3d5a821371e6cf
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BoundingBoxLeft"
+              },
+              "parameters": [
+                "Coin",
+                "=",
+                "_temp_Xcoin"
+              ]
+            },
+            {
+              "type": {
+                "value": "BoundingBoxTop"
+              },
+              "parameters": [
+                "Coin",
+                "=",
+                "_temp_Ycoin"
               ]
             }
           ],
-          "events": [
+          "actions": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BoundingBoxLeft"
-                  },
-                  "parameters": [
-                    "Coin",
-                    "=",
-                    "_temp_Xcoin"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BoundingBoxTop"
-                  },
-                  "parameters": [
-                    "Coin",
-                    "=",
-                    "_temp_Ycoin"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Coin",
-                    ""
-                  ]
-                }
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Coin",
+                ""
               ]
             }
           ]
@@ -22095,11 +22117,6 @@
           "name": "lastScene",
           "type": "string",
           "value": ""
-        },
-        {
-          "name": "coinramasse",
-          "type": "structure",
-          "children": []
         }
       ],
       "instances": [
@@ -25386,15 +25403,6 @@
             },
             {
               "type": {
-                "value": "PushVariable"
-              },
-              "parameters": [
-                "coinramasse",
-                "coinramasseg"
-              ]
-            },
-            {
-              "type": {
                 "value": "FileSystem::SaveVariableToJSONFileSync"
               },
               "parameters": [
@@ -25430,16 +25438,6 @@
               "parameters": [
                 "lastScene",
                 "\"save3.json\"",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "FileSystem::SaveVariableToJSONFileSync"
-              },
-              "parameters": [
-                "coinramasse",
-                "\"save4.json\"",
                 ""
               ]
             },
