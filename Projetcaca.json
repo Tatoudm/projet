@@ -1,7 +1,7 @@
 {
   "firstLayout": "Scene Logo",
   "gdVersion": {
-    "build": 224,
+    "build": 223,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -32713,7 +32713,19 @@
       "stopSoundsOnStartup": true,
       "title": "",
       "v": 209,
-      "uiSettings": {},
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.546875,
+        "windowMask": false
+      },
       "objectsGroups": [],
       "variables": [],
       "instances": [],
